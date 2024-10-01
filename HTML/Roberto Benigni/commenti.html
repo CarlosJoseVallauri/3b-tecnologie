@@ -77,26 +77,26 @@
     <br>
 
     <form>
-        <label id="filmPiaciuti">Quale tra i film ti è piaciuto di più?</label>
+        <label for="filmPiaciuti">Quale tra i film ti è piaciuto di più?</label>
         <input type="text" id="filmPiaciuti" name="filmPiaciuti" placeholder="Inserisci nome film" >
 
         <br><br>
 
         <label>Lo hai visto al cinema?</label>
-        <input type="radio" id="vistoCinemaSi" name="vistoCinema">
-        <label id="vistoCinema">si</label>
-        <input type="radio" id=vistoCinemaNo name="vistoCinema">
-        <label id="vistoCinemaNo">no</label>
+        <input type="radio" id="vistoCinemaSi" name="vistoCinema" value="Y">
+        <label for="vistoCinema">si</label>
+        <input type="radio" id=vistoCinemaNo name="vistoCinema" value="N">
+        <label for="vistoCinemaNo">no</label>
 
         <br><br>
 
-        <label id="vistoVolte">Lo hai visto più volte?</label>
+        <label for="vistoVolte">Lo hai visto più volte?</label>
         <input type="checkbox" id="vistoVolte" name="vistoVolte">
-        <label id="vistoVolte">si</label>
+        <label for="vistoVolte">si</label>
 
         <br><br>
 
-        <label id="votoFilm">Assegna un voto da 1 a 10</label>
+        <label for="votoFilm">Assegna un voto da 1 a 10</label>
         <input type="number" id="votoFilm" name="votoFilm" min="1" max="10">
         <input type="submit">
     </form>
