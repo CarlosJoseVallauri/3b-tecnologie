@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acquisto</title>
+</head>
+<body>
+    <h1 align="center"><b>Inserire i dati per l'acquisto</b></h1>
+
+    
+    <form action="./pag3.html" target="_blank">
+        <label for="textNome">Cognome e nome</label>
+        <input type="text" name="textNome" id="textNome">
+
+        <br><br>
+
+        <label for="codArt">Codice articolo da acquistare (da 1 a 10)</label>
+        <input type="number" min="1" max="10" name="codArt" id="codArt">
+
+        <br><br>
+
+        <table width="140">
+            <tr>
+                <td valign="top">
+                    <label>Misura</label>
+                </td>
+                 
+                <td>
+                    <input type="radio" name="optSize" id="optS" value="S">
+                    <label for="optS">Piccola</label>
+
+                    <input type="radio" name="optSize" id="optM" value="M">
+                    <label for="optM">Media</label>
+
+                    <input type="radio" name="optSize" id="optL" value="L">
+                    <label for="optL">Grande</label>
+                </td>
+            </tr>
+        </table>
+
+        <br><br>
+
+        <label for="chkFatt">Fattura</label>
+        <input type="checkbox" id="chkFatt" name="chkFatt">
+
+        <br><br>
+
+        <label for="chkGift">Pacco regalo</label>
+        <input type="checkbox" id="chkGift" name="chkGift">
+
+        <br><br>
+
+        <label>Pagamento</label>
+        <select>
+            <option>Contrassegno</option>
+            <option>Carta di Credito</option>
+            <option>Vaglia postale</option>
+        </select>
+
+        <br><br><br>
+
+        <input type="submit">
+    </form>
+
+    <div>
+        Condividi su <a href="https:\\facebook.com" target="_blank"><img src="./img/facebook.png" title="Vai a Facebook" width="60" align="top"></a>
+    </div>  
+</body>
+</html>
