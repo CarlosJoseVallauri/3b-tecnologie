@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" align="center">
+        <tr>
+            <td rowspan="2">
+                <b>Roberto Benigni</b>
+            </td>
+
+            <td colspan="2" align="center">
+                <b>Altri film</b>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" >
+                <b>Titolo</b>
+            </td>
+            
+            <td align="center">
+                <b>Descrizione</b>
+            </td>
+        </tr>
+
+        <tr>        
+            <td>
+                1988
+            </td>
+
+            <td>
+                <b>Il piccolo diavolo</b>
+            </td>
+
+            <td>
+                Padre Maurizio viene chiamato a compiere un esorcismo per liberare <br> una donna dall'essere che la stava possedendo.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                1994
+            </td>
+
+            <td>
+                <b>Il mostro</b>
+            </td>
+
+            <td>
+                Loris è un giovane disoccupato che si guadagna da vivere con lavori <br>
+                saltuari. Una serie di equivoci porta la polizia a sospettare che Loris <br>
+                sia il maniaco sessuale e serial killer di donne che terrorizza il quartiere.
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                2005
+            </td>
+
+            <td>
+                <b>La tigre e la neve</b>
+            </td>
+
+            <td>
+                Attilio de Giovanni, svagato ed estroso professore di poesia, <br>
+                divorziato e padre di due preadolescenti, è innamorato perdutamente <br>
+                di Vittoria, una scrittrice che gli appare in sogno tutte le notti
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <form>
+        <label for="filmPiaciuti">Quale tra i film ti è piaciuto di più?</label>
+        <input type="text" id="filmPiaciuti" name="filmPiaciuti" placeholder="Inserisci nome film" >
+
+        <br><br>
+
+        <label>Lo hai visto al cinema?</label>
+        <input type="radio" id="vistoCinemaSi" name="vistoCinema" value="Y">
+        <label for="vistoCinema">si</label>
+        <input type="radio" id=vistoCinemaNo name="vistoCinema" value="N">
+        <label for="vistoCinemaNo">no</label>
+
+        <br><br>
+
+        <label for="vistoVolte">Lo hai visto più volte?</label>
+        <input type="checkbox" id="vistoVolte" name="vistoVolte">
+        <label for="vistoVolte">si</label>
+
+        <br><br>
+
+        <label for="votoFilm">Assegna un voto da 1 a 10</label>
+        <input type="number" id="votoFilm" name="votoFilm" min="1" max="10">
+        <input type="submit">
+    </form>
+
+    <a href="./index.html"><img src="./img/ritorna.gif"></a>
+</body>
+</html>

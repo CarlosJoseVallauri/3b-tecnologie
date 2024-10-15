@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1><b>Registrazione al corso di HTML</b></h1>
+
+    <br>
+
+    <form action="./logged.html">
+        <label for="nomeUtente">Nominativo</label>
+        <input type="text" max="20" name="nomeUtente" id="nomeUtente" placeholder="Inserisci il tuo nome">
+        
+        <br><br>
+
+        <label>Hai già seguito altri corsi?</label>
+
+        <br><br>
+
+        <input type="radio" name="optCorsi" id="corsiSi">
+        <label for="corsiSi">Si</label>
+        <br>
+        <input type="radio" name="optCorsi" id="corsiNo">
+        <label for="corsiNo">No</label>
+
+        <br><br>
+
+        <label>A quali argomenti sei interessato?</label>
+
+        <br><br>
+
+        <input type="checkbox" name="chkTopic" id="chkHTML" value="H">
+        <label for="chkHTML">HTML Base</label>
+        <br>
+        <input type="checkbox" name="chkTopic" id="chkCSS" value="C">
+        <label for="chkCSS">CSS</label>
+        <br>
+        <input type="checkbox" name="chkTopic" id="chkJS" value="J">
+        <label for="chkJS">JavaScript</label>
+
+        <br><br>
+
+        <input type="submit">
+        <input type="reset">
+        <a href="./index.html"><img src="./img/ritorna.gif" align="top"></a>
+    </form>
+</body>
+</html>

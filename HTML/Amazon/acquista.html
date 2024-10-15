@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acquista</title>
+</head>
+<body>
+    <div align="center">
+        <img src="img/amazon.png" width="1562">
+    </div>
+
+    <br>
+
+    <div align="center">
+        <h1><b>Inserisci i dati relativi all'acquisto</b></h1>
+        <form action="./conferma.html">
+            <table>
+                <tr>
+                    <td rowspan="2">
+                        <label>Luogo di spedizione:&nbsp;&nbsp;&nbsp;</label>
+                    </td>
+
+                    <td>
+                        <input type="radio" name="optSend" id="optHome">
+                        <label for="optHome">domicilio</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="radio" name="optSend" id="optPost">
+                        <label for="optPost">ufficio postale</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">
+                        <label>Opzioni aggiuntive:&nbsp;&nbsp;&nbsp;</label>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" name="chkAdd" id="chkIns" value="I">
+                        <label for="chkIns">assicurazione</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" name="chkAdd" id="chkFad" value="F">
+                        <label for="chkFad">consegna veloce</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Tipo di pagamento&nbsp;&nbsp;&nbsp;</label>
+                    </td>
+
+                    <td>
+                        <select>
+                            <option>visa</option>
+                            <option>mastercard</option>
+                            <option>american express</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label>Note:&nbsp;&nbsp;&nbsp;</label>
+                    </td>
+
+                    <td>
+                        <textarea cols="17" rows="5"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

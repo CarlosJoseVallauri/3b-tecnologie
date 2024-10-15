@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form e controlli</title>
+</head>
+<body>
+    <h1 align="center">Pagina di registrazione</h1>
+    <form action="pagina2.html">
+        <label for="txtNome">Nome</label> 
+        <input type="text" name="txtNome" id="txtNome" placeholder="Inserisci nome" minlength="2" maxlength="16" required>
+        
+        <br><br>
+        
+        <label for="txtCognome">Cognome</label> 
+        <input type="text" name="txtCognome" id="txtCognome" placeholder="Inserisci cognome" minlength="2" maxlength="16" required>
+
+        <br><br>
+
+        <label for="txtPassword">Password</label>
+        <input type="password" name="txtPassword" id="txtPassword" placeholder="Inserisci password" minlength="8" maxlength="20" required>
+
+        <br><br>
+
+        <label for="numEta">Età</label>
+        <input type="number" name="numEta" id="numEta" placeholder="Inserisci età" min="18" max="45">
+
+        <br><br>
+
+        <label for="pfp">Foto profilo</label>
+        <input type="file" accept="image/*" name="pfp" id="pfp">
+
+        <br><br>
+
+        <div>Hobbies:</div>
+        <br>
+        
+        <input type="checkbox" id="chkSport" name="chkHobbies">
+        <label for="chkSport">Sport</label>
+        
+        <br>
+        
+        <input type="checkbox" id="chkInfo" name="chkHobbies">
+        <label for="chkInfo">Informatica</label>
+        
+        <br>
+
+        <input type="checkbox" id="chkMusi" name="chkHobbies">
+        <label for="chkMusi">Musica</label>
+
+        <br><br>
+
+        <fieldset>
+            <legend>Settore di studio:</legend>
+            <input type="radio" id="optInfo" name="optSett" value="I" required>
+            <label for="optInfo">Informatica</label>
+
+            <br>
+
+            <input type="radio" id="optMecc" name="optSett" value="M" required>
+            <label for="optMecc">Meccanica</label>
+
+            <br>
+
+            <input type="radio" id="optElet" name="optSett" value="E" required>
+            <label for="optElet">Elettrotecnica</label>
+        </fieldset>
+
+        <br><br>
+
+        <label for="lstProvincia">Provincia di residenza</label>
+        <select name="lstProvincia" id="lstProvincia">
+            <option value="CN">Cuneo</option>
+            <option value="TO">Torino</option>
+            <option value="AT">Asti</option>
+            <option value="AL">Alessandria</option>
+        </select>
+
+        <br><br>
+
+        <label for="txtCommenti">Commenti</label>
+        <textarea name="txtCommenti" id="txtCommenti" cols="30" rows="5" placeholder="Inserisci commenti"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Registrati">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
