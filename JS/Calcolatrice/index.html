@@ -4,15 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <script src="./script.js"></script>
     <title>Calcolatrice</title>
 </head>
 <body>
     <div class="schermo">
-        Schermo
+        <label id="schermo"></label>
     </div>
 
     <div class="body">
+    </div>
 
+    <div class="button" style="position:absolute;left: 30px;top: 170px;">
+        <button onclick="numberPress(1)" id="button1" value="1">1</button>
+    </div>
+
+    <div class="button" style="position:absolute;left: 120px;top: 170px;">
+        <button onclick="numberPress(2)" id="button2" value="2">2</button>
+    </div>
+
+    <div class="button" style="position:absolute;left: 210px;top: 170px;">
+        <button onclick="numberPress(3)" id="button3" value="3">3</button>
+    </div>
+
+    <div class="button" style="position:absolute;left: 30px;top: 280px;">
+        <button onclick="numberPress(4)" id="button4" value="4">4</button>
+    </div>
+
+    <div class="button" style="position:absolute;left: 120px;top: 280px;">
+        <button onclick="numberPress(5)" id="button5" value="5">5</button>
+    </div>
+
+    <div class="button" style="position:absolute;left: 210px;top: 280px;">
+        <button onclick="numberPress(6)" id="button6" value="6">6</button>
+    </div>
+
+    <div class="button" style="position:absolute;left: 30px;top: 390px;">
+        <button onclick="numberPress(7)" id="button7" value="7">7</button>
+    </div>
+
+    <div class="button" style="position:absolute;left: 120px;top: 390px;">
+        <button onclick="numberPress(8)" id="button8" value="8">8</button>
+    </div>
+
+    <div class="button" style="position:absolute;left: 210px;top: 390px;">
+        <button onclick="numberPress(9)" id="button9" value="9">9</button>
+    </div>
+
+    <div class="button" style="position:absolute;left: 120px;top: 500px;">
+        <button onclick="numberPress(0)" id="button0" value="0">0</button>
+    </div>
+
+    <div class="divButton" style="position:absolute;left: 360px;top: 170px;">
+        <button onclick="operPress('+')" class="signButton">+</button>
+    </div>
+
+    <div class="divButton" style="position:absolute;left: 360px;top: 280px;">
+        <button onclick="operPress('-')" class="signButton">-</button>
+    </div>
+
+    <div class="divButton" style="position:absolute;left: 360px;top: 390px;">
+        <button onclick="operPress('*')" class="signButton">X</button>
+    </div>
+
+    <div class="divButton" style="position:absolute;left: 360px;top: 500px;">
+        <button onclick="operPress('/')" class="signButton">/</button>
+    </div>
+
+    <div class="divButton" style="position:absolute;left: 480px;top: 500px;">
+        <button onclick="drawRes()" class="signButton">=</button>
+    </div>
+
+    <div class="divButton" style="position:absolute;left: 480px;top: 170px;">
+        <button onclick="deleteAll()" class="delButton">CE</button>
     </div>
 </body>
 </html>
