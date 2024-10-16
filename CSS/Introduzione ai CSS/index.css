@@ -1,0 +1,30 @@
+p{
+    color: brown;
+    font-weight: bold;
+}
+
+div{
+    width: 400px;
+    height: 100px;
+    border: 1px #777 solid;
+    background-color: darkgreen;
+    margin: 10px;
+}
+
+div.secondoDiv{
+    margin-left: 200px;
+    border: 1px #f00 solid;
+    font-size: 15pt;
+}
+
+#terzoDiv{
+    font-size: 10pt;
+    font-style: italic;
+    color: darkblue;
+    padding: 10px, 10px;
+}
+
+#terzoDiv h1{
+    color: aqua;
+    text-align: center;
+}

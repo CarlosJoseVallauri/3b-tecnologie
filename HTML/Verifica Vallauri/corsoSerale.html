@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlo Riso</title>
+</head>
+<body>
+    <h1 align="center"><b>Modulo di iscrizione al Corso Serale</b></h1>
+
+    <form action="benvenuto.html">
+        <table align="center" width="440">
+            <tr>
+                <td>
+                    <label for="txtCognome">Cognome</label>
+                </td>
+
+                <td>
+                    <input type="text" id="txtCognome" name="txtCognome" size="20">
+                </td>
+            </tr>
+
+            <tr>
+                <td width="300">
+                    <label for="txtNome">Nome</label>
+                </td>
+
+                <td width="300">
+                    <input type="text" id="txtNome" name="txtNome" size="20">
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+
+                <td>
+                    <label>&nbsp;Giorno</label>
+                    <label>&nbsp;Mese</label> 
+                    <label>&nbsp;Anno</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Data di nascita</label>
+                </td>
+
+                <td width="300">
+                    <input type="text" id="txtDay" name="txtDay" size="3" maxlength="2">
+              
+                    <input type="text" id="txtMon" name="txtMon" size="3" maxlength="2">
+             
+                    <input type="text" id="txtYr" name="txtYr" size="4" maxlength="4">
+                </td>
+            </tr>
+
+            <tr>
+                <td ">
+                    <label>Genere</label>
+                </td>
+
+                <td>
+                    <label for="optMal">M</label>
+                    <input type="radio" id="optMal" name="optGen" value="M">
+                    <label for="optFem">F</label>
+                    <input type="radio" id="optFem" name="optGen" value="F">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="lstPro">Provincia</label>
+                </td>
+                <td>
+                    <select>
+                        <option value="CN">CN</option>
+                        <option value="AT">AT</option>
+                        <option value="AL">AL</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label>Secondo quali modalità si desidera ricevere maggiori informazioni?</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td rowspan="3"><label>(scelte multiple)</label></td>
+
+                <td>
+                    <label for="chkOrd">Posta ordinaria</label>
+                    <input type="checkbox" id="chkOrd" name="chkInfo" value="P">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="chkEle">Posta elettronica</label>
+                    <input type="checkbox" id="chkEle" name="chkInfo" value="E">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="chkTel">Telefono</label>
+                    <input type="checkbox" id="chkTel" name="chkInfo" value="T">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label for="txtNote">Note</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <textarea rows="10" cols="40"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
