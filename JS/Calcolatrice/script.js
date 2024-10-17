@@ -42,6 +42,9 @@ function drawRes(){
             else
                 display = "Divisione per 0";
             break;
+        case '^':
+            display = n1 ** n2;
+            break;
     }
 
     document.getElementById('schermo').innerText = display;
