@@ -1,3 +1,28 @@
 h1{
     text-align: center;
+    color:red;
+}
+
+div.Div1{
+    color: rgb(88, 165, 49);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12pt;
+    line-height: 100px
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.dotted{
+    text-decoration: dotted;
+    text-decoration: line-through;
+}
+
+body{
+    background-color: black;
 }
