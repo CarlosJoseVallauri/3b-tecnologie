@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+}
+
+.pulsante{
+    display: block;
+    border: solid darkgray;
+    border-width: 2px;
+    border-left-width: 5px;
+    width: 70px;
+    background-color: lightgray;
+    text-align: center;
+    padding: 6px;
+    margin: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
