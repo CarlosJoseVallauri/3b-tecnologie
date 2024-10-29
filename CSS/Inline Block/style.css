@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: content-box;
 }
 
 h1{
@@ -20,10 +21,13 @@ h1{
     display: inline-block;
     width: 150px;
     margin: 5px;
-    vertical-align: top;
 }
 
 #wrapper > label{
     text-align: right;
-    vertical-align: top;
+    margin-right: 6px;
+}
+
+#wrapper > input{
+    height: 22px;
 }
