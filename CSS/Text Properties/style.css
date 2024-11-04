@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+    color:red;
+}
+
+div.Div1{
+    color: rgb(88, 165, 49);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12pt;
+    line-height: 55px;
+    word-spacing: 10px;
+    width: 520px;
+    height: 500px;
+    background-color: black;
+    border: dotted red;
+    margin: 10px 10px 15px 20px;
+    padding: 10px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.dotted{
+    text-decoration: dotted;
+    text-decoration: line-through;
+}
+
+body{
+    background-color: darkblue;
+}

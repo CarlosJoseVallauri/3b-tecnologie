@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
+}
+
+#wrapper{
+    width: 350px;
+    border: 1px solid lightblue;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#wrapper > input, #wrapper > label{
+    display: inline-block;
+    width: 150px;
+    margin: 5px;
+}
+
+#wrapper > label{
+    text-align: right;
+    margin-right: 6px;
+}
+
+#wrapper > input{
+    height: 22px;
+}

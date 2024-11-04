@@ -1,0 +1,56 @@
+div.schermo{
+    background-color: cyan;
+    height: 100px;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 2px 2px 1px 2px;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20pt;
+}   
+
+div.body{
+    background-color: grey;
+    height: 625px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px 2px 2px 2px;
+}
+
+button{
+    background-color: lightgray;
+    font-size: 40pt;
+    padding: 20px;
+    font-weight: bold;
+}
+
+button.signButton{
+    background-color: darkgrey;
+    font-size: 20pt;
+    padding: 30px;
+    font-weight: bold;
+    width: 100%;
+    margin: 5px;
+}
+
+div.divButton{
+    width: 100px;
+    height: auto;
+}
+
+button.delButton{
+    background-color: red;
+    font-size: 20pt;
+    padding: 30px;
+    font-weight: bold;
+    width: 100%;
+    margin: 5px;
+}
