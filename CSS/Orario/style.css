@@ -25,6 +25,7 @@
     border: 5px solid darkgreen;
     font-size: 12pt;
     border-collapse: collapse;
+    user-select: none;
 }
 
 #wrapper th{
