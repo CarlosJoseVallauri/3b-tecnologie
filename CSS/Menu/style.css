@@ -1,0 +1,53 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: content-box;
+}
+
+h1{
+    text-align: center;
+    margin: 25px;
+}
+
+a{
+    display: inline-block;
+    width: 160px;
+    border: 1px solid #999;
+    border-left-width: 5px;
+    border-radius: 6px;
+    margin: 2px;
+    text-align: center;
+    font-weight: bold;
+    padding: 12px;
+    background-color: lightgrey;
+    text-decoration: none;
+    font-family: Verdana;
+    color: cornflowerblue;
+}
+
+.orizzontale li{
+    display: inline-block;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #999;
+    background-color: cornflowerblue;
+}
+
+a:focus{
+    color: white;
+    background-color: #22c;
+}
+
+ul.verticale{
+    margin: 20px auto;
+    width: 195px;
+    list-style: none;
+}
+
+ul.orizzontale{
+    margin: 20px auto;
+    width: 787px;
+    list-style: none;
+}
