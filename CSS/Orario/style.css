@@ -43,7 +43,7 @@
     letter-spacing: -1px;
 }
 
-#wrapper td:hover:not(.ora), th:hover:not(.free){
+#wrapper td:hover:not(.ora){
     background-color: blue;
     color:white;
     text-decoration: underline;
