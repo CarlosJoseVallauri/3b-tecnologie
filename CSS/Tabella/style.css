@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+}
+
+h1{
+    margin: 20px;
+    text-align: center;
+}
+
+table{
+    margin: 20px auto;
+    border: 1px solid #999;
+    background-color: #eee;
+    border-collapse: collapse;
+    font-family: Verdana;
+}
+
+table thead th{
+    width: 130px;
+    background-color: #aaf;
+    padding: 10px;
+}
+
+table tbody tr{
+    background-color: #ffa;
+}
+
+table tbody td{
+    padding: 10px;
+}
+
+table tbody td:hover{
+    background-color: aquamarine;
+    color: blueviolet;
+    text-decoration: overline;
+    cursor: pointer;
+}
+
+table tbody tr:nth-of-type(even){
+    background-color: mintcream;
+}
