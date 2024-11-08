@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+}
+
+#wrapper{
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    border: 1px solid;
+    position: relative;
+}
+
+.box{
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+    border: 1px solid #888;
+    font-weight: bold;
+    font-size: 24pt;
+    background-color: #ffa;
+    position: absolute;
+}
+
+.box:nth-of-type(1){
+    top: 10px;
+    left: 10px;
+}
+
+.box:nth-of-type(2){
+    top: 90px;
+    left: 90px;
+}
+
+.box:nth-of-type(3){
+    bottom: 10px;
+    right: 10px;
+}
