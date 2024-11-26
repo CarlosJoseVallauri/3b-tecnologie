@@ -1,0 +1,162 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: content-box;
+}
+
+body{
+    background-color: red;
+}
+
+#wrapper{
+    width: 800px;
+    margin: 0px auto;
+    background-color: white;
+}
+
+#wrapper > div:nth-of-type(1){
+    border: 1px solid #eee;
+    background-image: url(./img/logo.jpg);
+    background-repeat: no-repeat;
+    width: 123px;
+    height: 154px;
+    display: inline-block;
+}
+
+#wrapper > div:nth-of-type(1) > div{
+    position: relative;
+    left: 10px;
+    top: 30px;
+    height: 100px;
+    width: 100px;
+}
+
+#wrapper > div:nth-of-type(1) > div > p{
+    display:none;
+    width: 100%;
+    font-size: 40pt;
+    position: relative;
+    font-weight: bold;
+    top: 20px;
+    left: 30px;
+}
+
+#wrapper > div:nth-of-type(1):hover p{
+    display: inline-block;
+}
+
+#wrapper > div:nth-of-type(1):hover div{
+    background-color: rgba(256, 200, 200, 0.5);
+    border: 1px solid red;
+    border-radius: 50%;
+}
+
+#wrapper div.nav{
+    float: right;
+    margin-top: 60px;
+}
+
+#wrapper div.nav ul li{
+    list-style: none;
+    display: inline-block;
+    width: 80px;
+    height: 45px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#wrapper div.nav a{
+    color: red;
+    text-decoration: none;
+    line-height: 45px;
+}
+
+#wrapper div.nav ul li:hover a{
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#wrapper div.nav ul li:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+wrapper div.mainSection{
+    border: 1px solid black;
+    position: relative;
+}
+
+#wrapper div.mainSection h2{ 
+    padding: 15px;
+    width: 290px;
+    font-weight: bold;
+}
+
+#wrapper div.mainSection p{ 
+    padding: 0px 12px;
+}
+
+#wrapper div.mainSection div.col{
+    display: inline-block;
+    width: 32.5%;
+    margin: 1px;
+    vertical-align: top;
+}
+
+#wrapper div.footer{
+    padding: 15px;
+    background-color: rgb(160, 22, 20);
+    text-align: center;
+    color: white;
+}
+
+#wrapper form.login{
+    position: fixed;
+    width: 140px;
+    padding: 20px;
+    margin-right: 100px;
+    top: 12px;
+    right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+#wrapper form.login input{
+    border: 0px;
+    border-radius: 3px;
+    width: 110px;
+    display: inline-block;
+}
+
+#wrapper form.login input:nth-of-type(3){
+    font-weight: bold;
+}
+
+#wrapper form.login div:nth-of-type(1){
+    background-position: -144px -96px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    display: inline-block;
+    background-image: url(./img/icons.png);
+    vertical-align: middle;
+}
+
+#wrapper form.login div:nth-of-type(2){
+    background-position: -192px -96px;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    display: inline-block;
+    background-image: url(./img/icons.png);
+    vertical-align: middle;
+}
+
+#wrapper form.login div{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+}
