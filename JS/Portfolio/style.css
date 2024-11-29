@@ -14,21 +14,21 @@ body{
 div.container{
     width: 60vw;
     height: 90vh;
-    background-color: dimgrey;
-    border-radius: 2vw;
     margin-top: 5vh;
     align-content: center;
     justify-items: center;
 }
 
-div.monitor{
-    background-color: black;
-    width: 45vw;
-    height: 30vw;
-    padding: 2vw;
-    font-family: 'Courier New', Courier, monospace;
-    user-select: none;
-    list-style-position: inside;
-    font-size: 2vmin;
+#monitor{
+    width: 55vw;
+    height: 75vh;
+    display: flex;
+    align-self: center;
+    border: 5vw solid #7a7e6a;
+    border-radius: 1vw;
+    outline: 2vw solid #494b40;
+    outline-offset: -5vw;
 }
+
+
 

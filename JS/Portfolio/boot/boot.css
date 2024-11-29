@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;   
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+}
+
+div.bootimg{
+    width: 100vw;
+    height: 100vh;
+    padding: 2vw;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+}
+
+div.bootimg > p.bootlogo{
+    position: relative;
+    top: 20vh;
+    font-size: 30vh;
+    color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div.bootimg > p.bootlogo::after{
+    content: "IBM";
+    animation: bootanim 3s steps(10) 1;
+  }
+  @keyframes bootanim {
+    0% {
+        opacity: 0;
+      }
+    10%{
+        opacity: 10%;
+    }
+    20%{
+        opacity: 20%;
+    }
+    30% {
+        opacity: 30%;
+      }
+    40%{
+        opacity: 40%;
+    }
+    50% {
+        opacity: 50%;
+      }
+    60%{
+        opacity: 60%;
+    }
+    70%{
+        opacity: 70%;
+    }
+    80% {
+        opacity: 80%;
+      }
+    90%{
+        opacity: 90%;
+    }
+    100% {
+        opacity: 100%;
+      }
+}
+
+
+div.bootimg > p.load {
+    position: relative;
+    top: 30vh;
+    width: 60px;
+    display: flex;
+    justify-self: center;
+    aspect-ratio: 4;
+    background: radial-gradient(circle closest-side,whitesmoke 90%,#0000) 0/calc(100%/3) 100% space;
+    clip-path: inset(0 100% 0 0);
+    animation: l1 1s steps(4) infinite;
+    animation-delay: 3s;
+  }
+  @keyframes l1 {to{clip-path: inset(0 -34% 0 0)}}

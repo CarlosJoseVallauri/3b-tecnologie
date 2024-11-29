@@ -1,0 +1,37 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;   
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    color: #39FF14;
+    background-color: #1a1a1a;
+}
+
+div.monitor{
+    width: 100vw;
+    height: 100vh;
+    padding: 2vw;
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+    list-style-position: inside;
+    font-size: 2vmin;
+}
+
+div.monitor::after{
+    content: "_";
+    width: 5px;
+    height: 20px;
+    display: inline-block;
+    animation: lampeggio 1.5s steps(2) infinite;
+}
+
+@keyframes lampeggio {
+    0% {
+      opacity: 0;
+    }
+}
+  
