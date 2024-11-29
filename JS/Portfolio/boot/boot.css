@@ -28,11 +28,11 @@ div.bootimg > p.bootlogo{
 }
 
 div.bootimg > p.bootlogo::after{
-    content: "IBM";
+    content : url(../boot/bootlogo.png);
     animation: bootanim 3s steps(10) 1;
   }
   @keyframes bootanim {
-    0% {
+    /*0% {
         opacity: 0;
       }
     10%{
@@ -64,7 +64,7 @@ div.bootimg > p.bootlogo::after{
     }
     100% {
         opacity: 100%;
-      }
+      }*/
 }
 
 
