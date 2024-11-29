@@ -115,9 +115,9 @@ wrapper div.mainSection{
     position: fixed;
     width: 140px;
     padding: 20px;
-    margin-right: 100px;
+    margin-left: 415px;
     top: 12px;
-    right: 20px;
+    left: 50%;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: transparent;
