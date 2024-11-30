@@ -42,22 +42,41 @@ div.monitor h1{
 }
 
 div.monitor div.terminal p{
-    border: 1px;
     display: block;
-    font-family: 'Commodore 64 Pixelized', sans-serif;
     user-select: none;
     overflow: hidden;
-    text-transform: uppercase;
-    white-space: nowrap;
-    border-right: 3vmin solid #7d71df;
+    border-right: 3vmin solid ;
+    border-color: transparent;
     visibility: hidden;
-    animation: lampeggio 1s steps(2) infinite,
-               scrivi 5s steps(11, end);
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
+}
+
+
+div.monitor div.terminal p:nth-of-type(1){
+    animation: lampeggio 1s 0s steps(2) 8,
+                scrivi 5s 3s steps(11, end) forwards;
+    /*animation-delay: 3s;*/
+    /*animation-fill-mode: forwards;*/
     width: fit-content;
-}@keyframes lampeggio {0% {border-color: transparent;}}
- @keyframes scrivi {from {width: 0vw;} to {width: 19.5vw; visibility: visible;}}
+} @keyframes scrivi {from {width: 0vw;} to {width: 19.5vw; visibility: visible;}}
+  @keyframes lampeggio {100% {border-color: #7d71df;}}
+
+div.monitor div.terminal p:nth-of-type(2){
+    animation: appari 1s steps(1, end);
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+} @keyframes appari {100% {visibility: visible;}}
+
+div.monitor div.terminal p:nth-of-type(3){
+    animation: appari 1s steps(1, end);
+    animation-delay: 9s;
+    animation-fill-mode: forwards;
+} @keyframes appari {100% {visibility: visible;}}
+
+div.monitor div.terminal p:nth-of-type(4){
+    animation: appari 1s steps(1, end);
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+} @keyframes appari {100% {visibility: visible;}}
 
 div.monitor div.input:focus{
     outline: none;
