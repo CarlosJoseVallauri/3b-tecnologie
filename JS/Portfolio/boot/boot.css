@@ -33,18 +33,3 @@ div.bootimg > p.bootlogo::after{
     animation: bootanim 3s steps(30) 1;
   }
   @keyframes bootanim {from {opacity: 0;} to {opacity: 1;}}
-
-
-div.bootimg > p.load {
-    position: relative;
-    top: 30vh;
-    width: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    aspect-ratio: 4;
-    background: radial-gradient(circle closest-side,#5d594f 90%,#0000) 0/calc(100%/3) 100% space;
-    clip-path: inset(0 100% 0 0);
-    animation: l1 1s steps(4) infinite;
-    animation-delay: 3s;
-  }
-  @keyframes l1 {to{clip-path: inset(0 -34% 0 0)}}
