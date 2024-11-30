@@ -29,6 +29,7 @@ div.bootimg > p.bootlogo{
 
 div.bootimg > p.bootlogo::after{
     content : url(../boot/bootlogo.png);
+    justify-self: center;
     animation: bootanim 3s steps(30) 1;
   }
   @keyframes bootanim {from {opacity: 0;} to {opacity: 1;}}
@@ -41,7 +42,7 @@ div.bootimg > p.load {
     display: flex;
     justify-self: center;
     aspect-ratio: 4;
-    background: radial-gradient(circle closest-side,/*whitesmoke*/#5d594f 90%,#0000) 0/calc(100%/3) 100% space;
+    background: radial-gradient(circle closest-side,#5d594f 90%,#0000) 0/calc(100%/3) 100% space;
     clip-path: inset(0 100% 0 0);
     animation: l1 1s steps(4) infinite;
     animation-delay: 3s;

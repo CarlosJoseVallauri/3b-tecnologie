@@ -50,11 +50,14 @@ div.monitor div.terminal p{
     text-transform: uppercase;
     white-space: nowrap;
     border-right: 3vmin solid #7d71df;
+    visibility: hidden;
     animation: lampeggio 1s steps(2) infinite,
                scrivi 5s steps(11, end);
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
     width: fit-content;
 }@keyframes lampeggio {0% {border-color: transparent;}}
- @keyframes scrivi {from {width: 0%;} to {width: 20%;}}
+ @keyframes scrivi {from {width: 0%;} to {width: 20%; visibility: visible;}}
 
 div.monitor div.input:focus{
     outline: none;
