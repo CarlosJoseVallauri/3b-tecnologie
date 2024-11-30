@@ -39,8 +39,8 @@ div.bootimg > p.load {
     position: relative;
     top: 30vh;
     width: 60px;
-    display: flex;
-    justify-self: center;
+    left: 50%;
+    transform: translateX(-50%);
     aspect-ratio: 4;
     background: radial-gradient(circle closest-side,#5d594f 90%,#0000) 0/calc(100%/3) 100% space;
     clip-path: inset(0 100% 0 0);
