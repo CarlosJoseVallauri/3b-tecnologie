@@ -7,29 +7,22 @@
 body{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
     background-color: #1a1a1a;
 }
 
 div.bootimg{
-    width: 100vw;
-    height: 100vh;
-    padding: 2vw;
+    display: flex;
     user-select: none;
     text-align: center;
-    justify-content: center;
 }
 
-div.bootimg > p.bootlogo{
-    position: relative;
-    top: 20vh;
-    font-size: 30vh;
-    color: whitesmoke;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-div.bootimg > p.bootlogo::after{
-    content : url(../boot/bootlogo.png);
-    justify-self: center;
+div.bootimg > img.bootlogo{
+    object-fit: scale-down;
+    max-width: 100vw;
+    height: auto;
     animation: bootanim 3s steps(30) 1;
   }
   @keyframes bootanim {from {opacity: 0;} to {opacity: 1;}}
