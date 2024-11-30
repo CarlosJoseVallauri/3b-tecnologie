@@ -1,37 +1,61 @@
+@import url('https://fonts.cdnfonts.com/css/commodore-64-pixelized');
+
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0vw;
+    padding: 0vw;
     box-sizing: content-box;   
 }
 
 body{
     display: flex;
+    color: #7d71df;
+    background-color: #7c71da;
+}
+
+div.wrapper{
+    display: flex;
     justify-content: center;
-    color: #39FF14;
-    background-color: #1a1a1a;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+div.wrapper div.titles{
+    line-height: 5vmin;
 }
 
 div.monitor{
-    width: 100vw;
-    height: 100vh;
+    width: 70vw;
+    height: 80vh;
     padding: 2vw;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Commodore 64 Pixelized', sans-serif;
     user-select: none;
     list-style-position: inside;
-    font-size: 2vmin;
+    font-size: 3vmin;
+    background-color: #3e32a2;
 }
 
-div.monitor::after{
-    content: "_";
-    width: 5px;
-    height: 20px;
-    display: inline-block;
-    animation: lampeggio 1.5s steps(2) infinite;
+div.monitor h1{
+    text-align: center;
+    font-weight: normal;
+    font-size: 3vmin;
 }
 
-@keyframes lampeggio {
-    0% {
-      opacity: 0;
-    }
+div.monitor div.terminal p{
+    border: 1px;
+    display: flex;
+    font-family: 'Commodore 64 Pixelized', sans-serif;
+    user-select: none;
+    overflow: hidden;
+    text-transform: uppercase;
+    white-space: nowrap;
+    border-right: 3vmin solid #7d71df;
+    animation: lampeggio 1s steps(2) infinite,
+               scrivi 5s steps(11, end);
+    width: fit-content;
+}@keyframes lampeggio {0% {border-color: transparent;}}
+ @keyframes scrivi {from {width: 0%;} to {width: 20%;}}
+
+div.monitor div.input:focus{
+    outline: none;
 }
-  
