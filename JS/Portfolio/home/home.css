@@ -57,7 +57,7 @@ div.monitor div.terminal p{
     animation-fill-mode: forwards;
     width: fit-content;
 }@keyframes lampeggio {0% {border-color: transparent;}}
- @keyframes scrivi {from {width: 0%;} to {width: 20%; visibility: visible;}}
+ @keyframes scrivi {from {width: 0%;} to {width: 29%; visibility: visible;}}
 
 div.monitor div.input:focus{
     outline: none;
