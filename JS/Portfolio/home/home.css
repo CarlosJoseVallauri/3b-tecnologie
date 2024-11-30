@@ -43,7 +43,7 @@ div.monitor h1{
 
 div.monitor div.terminal p{
     border: 1px;
-    display: flex;
+    display: block;
     font-family: 'Commodore 64 Pixelized', sans-serif;
     user-select: none;
     overflow: hidden;
@@ -57,7 +57,7 @@ div.monitor div.terminal p{
     animation-fill-mode: forwards;
     width: fit-content;
 }@keyframes lampeggio {0% {border-color: transparent;}}
- @keyframes scrivi {from {width: 0%;} to {width: 29%; visibility: visible;}}
+ @keyframes scrivi {from {width: 0vw;} to {width: 19.5vw; visibility: visible;}}
 
 div.monitor div.input:focus{
     outline: none;
