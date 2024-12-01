@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/commodore-64-pixelized');
+
 *{
     margin: 0px;
     padding: 0px;
@@ -7,8 +9,10 @@
 body{
     display: flex;
     justify-content: center;
-    color: #39FF14;
+    color: #7a7e6a;
     background-color: black;
+    overflow: hidden;
+    font-family: 'Commodore 64 Pixelized', sans-serif;
 }
 
 div.container{
@@ -28,7 +32,28 @@ div.container{
     border-radius: 1vw;
     outline: 2vw solid #494b40;
     outline-offset: -5vw;
+    position: relative;
+    right: 15vw;
 }
 
+div.container svg.keyboard{
+    position: relative;
+    width: 38vw;
+    left: 34vw;
+    bottom: 50vh;
+}
 
+div.container svg.keyboard a{
+    visibility: hidden;
+    animation: appari 1s steps(1, end);
+    animation-fill-mode: forwards;
+    animation-delay: 24s;
+}@keyframes appari{100% {visibility: visible;}}
 
+div.container p{
+    position: relative;
+    bottom: 40vh;
+    left: 34vw;
+    font-size: 1.9vmin;
+    user-select: none;
+}

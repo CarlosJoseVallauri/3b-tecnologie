@@ -45,20 +45,17 @@ div.monitor div.terminal p{
     display: block;
     user-select: none;
     overflow: hidden;
-    border-right: 3vmin solid ;
+    border-right: 3vmin solid;
     border-color: transparent;
     visibility: hidden;
 }
 
-
 div.monitor div.terminal p:nth-of-type(1){
-    animation: lampeggio 1s 0s steps(2) 8,
-                scrivi 5s 3s steps(11, end) forwards;
-    /*animation-delay: 3s;*/
-    /*animation-fill-mode: forwards;*/
+    animation: loadlampeggio 1s 0s steps(2) 8,
+                loadscrivi 5s 3s steps(11, end) forwards;
     width: fit-content;
-} @keyframes scrivi {from {width: 0vw;} to {width: 19.5vw; visibility: visible;}}
-  @keyframes lampeggio {100% {border-color: #7d71df;}}
+} @keyframes loadscrivi {from {width: 0vw;} to {width: 19.5vw; visibility: visible;}}
+  @keyframes loadlampeggio {100% {border-color: #7d71df;}}
 
 div.monitor div.terminal p:nth-of-type(2){
     animation: appari 1s steps(1, end);
@@ -78,6 +75,16 @@ div.monitor div.terminal p:nth-of-type(4){
     animation-fill-mode: forwards;
 } @keyframes appari {100% {visibility: visible;}}
 
-div.monitor div.input:focus{
-    outline: none;
-}
+div.monitor div.terminal p:nth-of-type(5){
+    animation: listlampeggio 1s 12s steps(2) 3,
+                listscrivi 2s 12s steps(4, end) forwards;
+    width: fit-content;
+} @keyframes listscrivi {from {width: 0vw;} to {width: 6.9vw; visibility: visible;}}
+  @keyframes listlampeggio {100% {border-color: #7d71df;}}
+
+div.monitor div.terminal p.list{
+    animation: appari 1s steps(1, end);
+    animation-delay: 15s;
+    animation-fill-mode: forwards;
+} @keyframes appari {100% {visibility: visible;}}
+
