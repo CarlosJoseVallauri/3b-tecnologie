@@ -23,24 +23,41 @@ div.container{
     justify-items: center;
 }
 
+div.container div.screen{
+    width: 65vw;
+    height: 90vh;
+    display: flex;
+    background-color: #7a7e6a;
+    border-radius: 1vw;
+    position: relative;
+    right: 15vw;
+    margin-right: 5vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3vh;
+    overflow: hidden;
+}
+
 #monitor{
     width: 55vw;
     height: 75vh;
     display: flex;
     align-self: center;
-    border: 5vw solid #7a7e6a;
-    border-radius: 1vw;
-    outline: 2vw solid #494b40;
-    outline-offset: -5vw;
-    position: relative;
+    /*border: 5vw solid #7a7e6a;
+    border-radius: 1vw;*/
+    border: 2vw solid #494b40;
+    /*outline-offset: -5vw;*/
+    /*position: relative;
     right: 15vw;
+    margin-right: 5vw;*/
 }
 
-div.container svg.keyboard{
-    position: relative;
-    width: 38vw;
-    left: 34vw;
-    bottom: 50vh;
+div.container div.controls svg.keyboard{
+    object-fit: scale-down;
+    width: 30vw;
+    margin-left: 3vw;
+    margin-top: auto;
 }
 
 div.container svg.keyboard a{
@@ -50,10 +67,28 @@ div.container svg.keyboard a{
     animation-delay: 24s;
 }@keyframes appari{100% {visibility: visible;}}
 
-div.container p{
-    position: relative;
-    bottom: 40vh;
-    left: 34vw;
-    font-size: 1.9vmin;
+div.container div.controls p{
     user-select: none;
+    font-size: 1.3vi;
+    text-wrap: wrap;
+    text-align: center;
+    align-self: center;
+    margin-top: auto;
+}
+
+div.container div.controls{
+    position: relative;
+    width: 38vw;
+    left: 34vw;
+    bottom: 40vh;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+}
+
+div.container div.screen img.logo{
+    width: 140px;
+    position: relative;
+    object-fit: scale-down;
+    top: 1vh;
 }

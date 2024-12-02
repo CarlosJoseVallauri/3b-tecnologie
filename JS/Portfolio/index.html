@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./favicon.ico" />
+    <link rel="icon" href="./assets/favicon.ico" />
     <link rel="stylesheet" href="./style.css">
     <title>Carlo Riso</title>
 </head>
 <body>
     <div class="container">
+      <div class="screen">
         <iframe id="monitor"
                 name="monitor"
                 src="./boot/boot.html"
                 scrolling="no"
                 sandbox="allow-scripts allow-same-origin"
         ></iframe>
-        <p>TASTIERA &#40;Q PER TORNARE AL MENU&#41;</p>
-        <svg class="keyboard" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2370 1670">
-            <image width="2370" height="1670" xlink:href="./keyboard.png"></image> <a xlink:href="javascript:lang();"> <!--Pulsante 2-->
-              <rect x="738" y="653" fill="#fff" opacity="0" width="100" height="100"></rect>
-            </a><a xlink:href="javascript:hobby();"><!--Pulsante 3-->
-              <rect x="849" y="652" fill="#fff" opacity="0" width="100" height="100"></rect>
-            </a><a xlink:href="javascript:intro();"><!--Pulsante 1-->
-              <rect x="629" y="652" fill="#fff" opacity="0" width="100" height="100"></rect>
-            </a><a xlink:href="javascript:menu();"><!--Menu-->
-              <rect x="681" y="758" fill="#fff" opacity="0" width="100" height="100"></rect>
+        <img src="./assets/logo.png" class="logo">
+      </div>
+        <div class="controls">
+          <p>TASTIERA<br>&#40;Q PER TORNARE AL MENU&#41;</p>
+          <svg class="keyboard" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1604 934">
+            <image width="1604" height="934" xlink:href="./assets/keyboard.png"></image> <a xlink:href="javascript:intro();">
+              <rect x="243" y="246" fill="#fff" opacity="0" width="100" height="100"></rect>
+            </a><a xlink:href="javascript:lang();">
+              <rect x="354" y="246" fill="#fff" opacity="0" width="100" height="100"></rect>
+            </a><a xlink:href="javascript:hobby();">
+              <rect x="464" y="246" fill="#fff" opacity="0" width="100" height="100"></rect>
+            </a><a xlink:href="javascript:menu();">
+              <rect x="294" y="353" fill="#fff" opacity="0" width="100" height="100"></rect>
             </a>
           </svg>
+        </div>
         <script src="./script.js"></script>
     </div>
 </body>
