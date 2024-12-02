@@ -82,8 +82,11 @@ div.container div.controls{
 }
 
 div.container div.screen img.logo{
-    width: 140px;
+    /*width: 140px;*/
     position: relative;
     object-fit: scale-down;
     top: 1vh;
+    background-color: #494b40;
+    border-radius: 1vh;
+    padding: 0.3vmin;
 }
