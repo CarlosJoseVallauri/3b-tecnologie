@@ -88,3 +88,9 @@ div.monitor div.terminal p.list{
     animation-fill-mode: forwards;
 } @keyframes appari {100% {visibility: visible;}}
 
+div.monitor div.terminal p.blinker{
+    animation: blinker 1s 16s steps(2) infinite;
+    width: fit-content;
+}@keyframes blinker {100% {border-color: #7d71df; visibility: visible;}}
+
+
