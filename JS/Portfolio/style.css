@@ -44,13 +44,8 @@ div.container div.screen{
     height: 75vh;
     display: flex;
     align-self: center;
-    /*border: 5vw solid #7a7e6a;
-    border-radius: 1vw;*/
     border: 2vw solid #494b40;
-    /*outline-offset: -5vw;*/
-    /*position: relative;
-    right: 15vw;
-    margin-right: 5vw;*/
+    border-radius: 1vw;
 }
 
 div.container div.controls svg.keyboard{
