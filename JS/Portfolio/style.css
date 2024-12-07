@@ -20,7 +20,6 @@ div.container{
     height: 90vh;
     margin-top: 5vh;
     align-content: center;
-    justify-items: center;
 }
 
 div.container div.screen{
@@ -30,7 +29,7 @@ div.container div.screen{
     background-color: #7a7e6a;
     border-radius: 1vw;
     position: relative;
-    right: 14vw;
+    right: 18vw;
     margin-right: 5vw;
     justify-content: center;
     align-items: center;
@@ -79,6 +78,7 @@ div.container div.controls{
     height: 40vh;
     display: flex;
     flex-direction: column;
+    margin-left: 11.5vw;
 }
 
 div.container div.screen img.logo{
@@ -89,4 +89,5 @@ div.container div.screen img.logo{
     background-color: #494b40;
     border-radius: 1vh;
     padding: 0.3vmin;
+    display: block;
 }
