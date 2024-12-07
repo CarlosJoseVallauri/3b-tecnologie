@@ -30,7 +30,6 @@ div.container div.screen{
     border-radius: 1vw;
     position: relative;
     right: 18vw;
-    margin-right: 5vw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -50,7 +49,6 @@ div.container div.screen{
 div.container div.controls svg.keyboard{
     object-fit: scale-down;
     width: 30vw;
-    margin-left: 3vw;
     margin-top: auto;
 }
 
@@ -64,30 +62,26 @@ div.container svg.keyboard a{
 div.container div.controls p{
     user-select: none;
     font-size: 1.3vi;
-    text-wrap: wrap;
-    text-align: center;
-    align-self: center;
     margin-top: auto;
 }
 
 div.container div.controls{
     position: relative;
-    width: 38vw;
-    left: 34vw;
+    width: fit-content;
+    left: 37vw;
     bottom: 40vh;
     height: 40vh;
     display: flex;
     flex-direction: column;
     margin-left: 11.5vw;
+    text-align: center;
 }
 
 div.container div.screen img.logo{
-    /*width: 140px;*/
+    width: 7vw;
     position: relative;
-    object-fit: scale-down;
     top: 1vh;
     background-color: #494b40;
     border-radius: 1vh;
     padding: 0.3vmin;
-    display: block;
 }
