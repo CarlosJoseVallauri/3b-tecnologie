@@ -21,6 +21,8 @@ div.wrapper{
 }
 
 div.monitor{
+    display: flex;
+    flex-direction: column;
     width: 70vw;
     height: 80vh;
     padding: 2vw;
@@ -29,4 +31,48 @@ div.monitor{
     list-style-position: inside;
     font-size: 3vmin;
     background-color: #3e32a2;
+}
+
+div.monitor > h1.title{
+    text-align: center;
+    font-size: 5vh;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+}
+
+div.monitor  p{
+    line-height: 3.2vh;
+    letter-spacing: -0.1vw;
+}
+
+div.monitor ul{
+    list-style: none;
+    font-size: 4vh;
+}
+
+div.monitor ul:nth-of-type(1){
+    margin-right: 4vw;
+}
+
+div.monitor ul:nth-of-type(2){
+    text-align: right;
+}
+
+div.monitor ul:nth-of-type(2) li{
+    margin-bottom: 5vh;
+}
+
+div.monitor ul li{
+    margin-bottom: 3vh;
+}
+
+div.monitor ul li p{
+    font-size: 3vh;
+    width: 33vw;
+}
+
+div.monitor div.list{
+    display: flex;
+    flex: 1;
+    flex-direction: row;
 }

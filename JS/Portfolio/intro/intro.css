@@ -21,6 +21,9 @@ div.wrapper{
 }
 
 div.monitor{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
     width: 70vw;
     height: 80vh;
     padding: 2vw;
@@ -29,4 +32,16 @@ div.monitor{
     list-style-position: inside;
     font-size: 3vmin;
     background-color: #3e32a2;
+}
+
+div.monitor > h1.title{
+    text-align: center;
+    font-size: 5vh;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+div.monitor > p{
+    line-height: 3.2vh;
+    letter-spacing: -0.1vw;
 }

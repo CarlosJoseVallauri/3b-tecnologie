@@ -28,5 +28,5 @@ else
 }
 
 if (hasTouchScreen) {
-    window.location.assign("./mobile/mobileerr.html");
+    window.location.assign("./mobile/mobile.html");
 }
