@@ -86,11 +86,13 @@ div.monitor img{
 #img1{
     bottom: 14vh;
     right: -13vw;
+    width: 651px;
 }
 
 #img2{
     bottom: 8.5vh;
     right: -11vw;
+    width: 620px;
 }
 
 div.monitor div.button:hover img{
