@@ -18,9 +18,15 @@ div.wrapper{
     align-items: center;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 div.monitor{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: column;
+    gap: 3vh;
     width: 70vw;
     height: 80vh;
     padding: 2vw;
@@ -29,4 +35,66 @@ div.monitor{
     list-style-position: inside;
     font-size: 3vmin;
     background-color: #3e32a2;
+}
+
+div.monitor > h1.title{
+    text-align: center;
+    font-size: 5vh;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+}
+
+div.monitor  p{
+    line-height: 3.2vh;
+    letter-spacing: -0.1vw;
+}
+
+div.monitor div.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8vh;
+    width: 17vw;
+    font-size: calc(5vh - 20px);
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    background-color: #7c71da;
+    border-color: #5c54a8;
+    border-width: 5px;
+    font-family: 'Commodore 64 Pixelized', sans-serif;
+    color: #3e32a2;
+}
+
+div.monitor div.buttons{
+    display: flex;
+    gap: 15vw;
+    margin-top: 5vh;
+    justify-content: space-evenly;
+    width: fit-content;
+    position: fixed;
+    bottom: 15vh;
+    left: 25vw;
+}
+
+div.monitor img{
+    opacity: 0%;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    pointer-events: none;
+}
+
+#img1{
+    width: 651px;
+    bottom: 14vh;
+    right: -13vw;
+}
+
+#img2{
+    width: 620px;
+    bottom: 8.5vh;
+    right: -11vw;
+}
+
+div.monitor div.button:hover img{
+    opacity: 100%;
 }
