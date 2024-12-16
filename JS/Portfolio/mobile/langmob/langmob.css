@@ -28,7 +28,7 @@ div.header{
     position: sticky;
     margin-bottom: auto;
     height: fit-content;
-    margin-bottom: 5vh;
+    margin-bottom: 3.2vh;
 }
 
 div.text{
@@ -36,8 +36,15 @@ div.text{
     flex-direction: column;
     font-family: 'Commodore 64 Pixelized', sans-serif;
     font-size: 2vh;
-    gap: 5vh;
     text-align: center;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    margin-bottom: 2vh;
 }
 
 div.header h1, div.header h3{

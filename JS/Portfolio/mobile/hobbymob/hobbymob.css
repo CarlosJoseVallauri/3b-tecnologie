@@ -36,8 +36,9 @@ div.text{
     flex-direction: column;
     font-family: 'Commodore 64 Pixelized', sans-serif;
     font-size: 2vh;
-    gap: 5vh;
+    gap: 6vh;
     text-align: center;
+    justify-content: center;
 }
 
 div.header h1, div.header h3{
@@ -86,4 +87,34 @@ div.navbar a{
 div.navbar a:active{
     text-decoration: none;
     color: #58519b;
+}
+
+div.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    font-size: 2vh;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    background-color: #7c71da;
+    border-color: #5c54a8;
+    border-width: 5px;
+    font-family: 'Commodore 64 Pixelized', sans-serif;
+}
+
+div.button a{
+    color: #3e32a2;
+    text-decoration: none;
+}
+
+div.button a:active{
+    color: #272066;
+}
+
+div.buttons{
+    display: flex;
+    gap: 1vh;
+    justify-content: center;
 }

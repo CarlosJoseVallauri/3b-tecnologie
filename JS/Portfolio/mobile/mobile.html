@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./mobile.css">
-    <title>Mobile</title>
+    <title>Carlo Riso</title>
 </head>
 <body>
     <div class="wrapper">
+        <script src="./navbar.js"></script>
         <div class="header">
-            <button><img src="./button.png" alt="" role="menu"></button>
+            <div class="navigation">
+                <button id="navbtn" onclick="javascript:navShow();"><img src="./button.png" alt="" role="menu"></button>
+                <div class="navbar" id="navbar">
+                    <p><a href="./langmob/langmob.html">Linguaggi</a></p>
+                    <hr>
+                    <p><a href="./hobbymob/hobbymob.html">Hobby</a></p>
+                </div>
+            </div>
             <h1>CARLO RISO</h1>
             <h3>Introduzione</h3>
         </div>
