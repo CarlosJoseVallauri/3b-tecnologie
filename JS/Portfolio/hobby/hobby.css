@@ -55,7 +55,7 @@ div.monitor div.button{
     justify-content: center;
     height: 8vh;
     width: 17vw;
-    font-size: calc(5vh - 20px);
+    font-size: 3vh;
     flex-wrap: wrap;
     flex-shrink: 0;
     background-color: #7c71da;
@@ -86,13 +86,13 @@ div.monitor img{
 #img1{
     bottom: 14vh;
     right: -13vw;
-    width: 521px;
+    width: 74vw;
 }
 
 #img2{
     bottom: 12vh;
-    right: -9vw;
-    width: 450px;
+    right: -5vw;
+    width: 59vw;
 }
 
 div.monitor div.button:hover img{
