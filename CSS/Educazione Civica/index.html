@@ -9,18 +9,20 @@
 <body>
     <div class="wrapper">
         <h1>Raccolta dati sull'uso dei dispositivi elettronici</h1>
-        <form>
+        <input type="submit" id="subBtn" form="form1">
+
+        <form id="form1" action="./landing.html">
             <div class="usrNum">
                 Sei un uomo o una donna?
 
                 <p>
                     <label for="rdM">Uomo</label>
-                    <input type="radio" required="" name="rdGen" id="rdM"> 
+                    <input type="radio" required="" value="M" name="rdGen" id="rdM"> 
                 </p>
 
                 <p>
                     <label for="rdF">Donna</label>
-                    <input type="radio" required="" name="rdGen" id="rdF">
+                    <input type="radio" required="" value="F" name="rdGen" id="rdF">
                 </p>
             </div>
 
@@ -31,7 +33,7 @@
 
                 <p>
                     <label for="selAge">Età</label>
-                    <input type="number" required="" name="selAge" id="selAge" min="0" max="99">
+                    <input type="number" required="" name="selAge" id="selAge" min="0" max="99" placeholder="0-99">
                 </p>
             </div>
 
@@ -42,17 +44,17 @@
 
                 <p>
                     <label for="rdPC">Computer</label>
-                    <input type="radio" required="" name="rdDev" id="rdPC"> 
+                    <input type="radio" required="" value="C" name="rdDev" id="rdPC"> 
                 </p>
 
                 <p>
                     <label for="rdTel">Telefono</label>
-                    <input type="radio" required="" name="rdDev" id="rdTel">
+                    <input type="radio" required="" value="T" name="rdDev" id="rdTel">
                 </p>
 
                 <p>
                     <label for="rdTab">Tablet</label>
-                    <input type="radio" required="" name="rdDev" id="rdTab">
+                    <input type="radio" required="" value="B" name="rdDev" id="rdTab">
                 </p>
             </div>
 
@@ -63,24 +65,70 @@
 
                 <p>
                     <label for="numPC">Computer</label>
-                    <input type="number" required="" name="numPc" id="numPC" min="0" max="24"> 
+                    <input type="number" required="" value="C" name="numPc" id="numPC" min="0" max="24" placeholder="Es. 6..."> 
                 </p>
 
                 <p>
                     <label for="numTel">Telefono</label>
-                    <input type="number" required="" name="numTel" id="numTel" min="0" max="24">
+                    <input type="number" required="" value="T" name="numTel" id="numTel" min="0" max="24" placeholder="Es. 6...">
                 </p>
 
                 <p>
                     <label for="numTab">Tablet</label>
-                    <input type="number" required="" name="numTab" id="numTab" min="0" max="24">
+                    <input type="number" required="" value="B" name="numTab" id="numTab" min="0" max="24" placeholder="Es. 6...">
                 </p>
             </div>
 
             <hr>
 
             <div class="usrNum">
-                
+                Da che area d'Italia provieni?
+                <p id="selArea">
+                    <select name="selArea" required="">
+                        <option value="NO">Nord Ovest</option>
+                        <option value="NE">Nord Est</option>
+                        <option value="C">Centro</option>
+                        <option value="S">Sud e Isole</option>
+                    </select>
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="usrNum">
+                Per cosa usi maggiormente internet?
+                <p id="txtInt">
+                    <input type="text" name="txtInt" maxlength="20" required="" placeholder="Es. Ricette...">
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="usrNum">
+                Quali delle seguenti piattaforme utilizzi?
+                <p>
+                    <label for="chkF">Facebook</label>
+                    <input type="checkbox" name="chkPl" id="chkF" value="FB">
+                    <label for="chkI">Instagram</label>
+                    <input type="checkbox" name="chkPl" id="chkI" value="IG">
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="usrNum">
+                Come valuteresti la sicurezza di queste piattaforme &#40;se utilizzate&#41;?
+                <p id="ratSoc">
+                    <input type="number" min="1" max="10" name="ratSoc" placeholder="1-10">
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="usrNum">
+                <p>
+                    <textarea placeholder="Commenti" name="txtCm" id="txtCm"></textarea>
+                </p>
             </div>
         </form>
     </div>

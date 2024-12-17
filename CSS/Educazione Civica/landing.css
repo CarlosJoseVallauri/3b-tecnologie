@@ -1,0 +1,16 @@
+body{
+    background-color: aquamarine;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.text{
+    font-size: 50pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: lightcoral;
+}

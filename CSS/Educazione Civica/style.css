@@ -5,9 +5,34 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-input{
+body{
+    background-color: aquamarine;
+}
+
+input:not(input[type="submit"]), select, textarea{
     border-radius: 5px;
     border-width: 1px;
+    padding: 3px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color:floralwhite;
+}
+
+input[type="submit"]{
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 3px;
+    background-color:floralwhite;
+    color:lightcoral;
+    font-weight: bold;
+    border-color: transparent;
+}
+
+input:focus{
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 div.wrapper{
@@ -32,7 +57,7 @@ form{
 
 div.wrapper h1{
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     margin-top: 30px;
 }
 
@@ -59,4 +84,38 @@ div.usrNum p{
 
 #hour p{
     width: 40%;
+}
+
+#hour input, #selAge{
+    width: 50px;
+}
+
+#selArea, #txtInt, #ratSoc{
+    justify-content: center;
+}
+
+#txtInt input{
+    height: 30px;
+    padding: 3px;
+}
+
+#txtCm{
+    width: 500px;
+    height: 150px;
+    resize: none;
+}
+
+#subBtn{
+    position: fixed;
+    top: 50%;
+    left: 85%;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    font-size: 20pt;
+    text-align: center;
+}
+
+#ratSoc input{
+    width: 50px;
 }
