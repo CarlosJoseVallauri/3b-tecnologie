@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Educazione Civica</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Raccolta dati sull'uso dei dispositivi elettronici</h1>
+        <form>
+            <div class="usrNum">
+                Sei un uomo o una donna?
+
+                <p>
+                    <label for="rdM">Uomo</label>
+                    <input type="radio" required="" name="rdGen" id="rdM"> 
+                </p>
+
+                <p>
+                    <label for="rdF">Donna</label>
+                    <input type="radio" required="" name="rdGen" id="rdF">
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="usrNum">
+                Quanti anni hai?
+
+                <p>
+                    <label for="selAge">Età</label>
+                    <input type="number" required="" name="selAge" id="selAge" min="0" max="99">
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="usrNum">
+                Cosa usi maggiormente quotidianamente?
+
+                <p>
+                    <label for="rdPC">Computer</label>
+                    <input type="radio" required="" name="rdDev" id="rdPC"> 
+                </p>
+
+                <p>
+                    <label for="rdTel">Telefono</label>
+                    <input type="radio" required="" name="rdDev" id="rdTel">
+                </p>
+
+                <p>
+                    <label for="rdTab">Tablet</label>
+                    <input type="radio" required="" name="rdDev" id="rdTab">
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="usrNum" id="hour">
+                Quanto tempo (ore) spendi su ognuno ogni giorno?
+
+                <p>
+                    <label for="numPC">Computer</label>
+                    <input type="number" required="" name="numPc" id="numPC" min="0" max="24"> 
+                </p>
+
+                <p>
+                    <label for="numTel">Telefono</label>
+                    <input type="number" required="" name="numTel" id="numTel" min="0" max="24">
+                </p>
+
+                <p>
+                    <label for="numTab">Tablet</label>
+                    <input type="number" required="" name="numTab" id="numTab" min="0" max="24">
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="usrNum">
+                
+            </div>
+        </form>
+    </div>
+</body>
+</html>
