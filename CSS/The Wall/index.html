@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+   <meta charset="UTF-8">
+   <title>Verifica CSS3</title>
+   <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+   <div id="wrapper">
+   
+	<header>
+		<h1>Verifica HTML5 CSS3</h1>
+		<nav>
+			<h3>Visita le nostre pagine:</h3>
+			<ul>
+				<li><a href="#">HTML5</a></li>
+				<li><a href="#">CSS3</a></li>
+				<li><a href="#">JavaScript</a></li>
+			</ul>
+		</nav>
+	</header>
+    
+   	<section id="mainSection">  
+        <article>
+                <h2> Scarica le nostre Demo: </h2>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. 
+				    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+				</p>
+				<a href="#" class="demo"><img src="img/img1.png"> </a>
+				<a href="#" class="demo"><img src="img/img2.png"> </a>
+				<a href="#" class="demo"><img src="img/img3.png"> </a>
+		   		<a href="#" class="demo"><img src="img/img4.png"> </a>
+				<a href="#" class="demo"><img src="img/img5.png"> </a>
+				<a href="#" class="demo"><img src="img/img6.png"> </a>
+		</article>
+	</section>
+   
+    <aside>  		
+		<section>  
+			<div id=progressBar> Registrati al nostro sito :  </div> 
+			
+            <form id="form1">
+			<fieldset>
+				<legend>Compila la seguente scheda</legend>
+				
+				<br>
+                <label for="txtName">Nome</label>
+				<input type="text" name="txtName" id="txtName" placeholder="Inserisci nome" required><br><br>
+				
+				<label for="txtSur">Cognome</label>
+				<input type="text" name="txtSur" id="txtSur" placeholder="Inserisci cognome" required><br><br>
+				
+				<label for="dateBirth">Data di nascita</label>
+				<input type="dateBirth" name="dateBirth" id="dateBirth" required placeholder="gg/mm/aaaa"><br><br>
+				
+				<label for="numCls">Classe</label>
+				<input type="number" name="numCls" id="numCls" max="5" min="1" required><br><br>
+				
+				<label for="selSett">Settore</label>
+				<select id="selSett" name="selSett" required>
+					<option value="I">Informatica</option>
+					<option value="E">Elettrotecnica</option>
+					<option value="M">Meccatronica</option>
+				</select><br><br>
+				
+				<label for="ranDis">Distanza da Fossano (km):</label><br>
+				<span style="margin-right: 100px;">1</span><span>50</span><br>
+				<input type="range" name="ranDis" id="ranDis" max="50" min="0" step="5" required><br><br>
+				<input type="submit">
+			</fieldset> 
+            </form>			
+		</section>  
+		
+		<ul id="socialNetworks">
+			<li class="twitter"><a href="#"> </a></li>
+			<li class="facebook"><a href="#"> </a></li>
+			<li class="linkedin"><a href="#"> </a></li>
+		</ul>	
+		
+    </aside> 
+               
+    </div>   <!-- wrapper -->   
+</body>
+</html>

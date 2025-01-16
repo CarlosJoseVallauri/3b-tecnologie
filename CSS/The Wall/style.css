@@ -1,0 +1,194 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+}
+
+html{
+    font-family: Verdana, Helvetica;
+    font-size: 11pt;
+    background-image: url(./img/sfondo.jpg);
+    background-repeat: repeat;
+    background-position: center;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+#wrapper{
+    width: 1024px;
+    border: 1px solid blue;
+}
+
+#wrapper > header > h1{
+    font-size: 30pt;
+    color: blue;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-shadow: 3px 3px 4px rgb(25, 25, 117); 
+}
+
+#wrapper header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#wrapper header h3{
+    color: rgb(100, 228, 228);
+    display: inline-block;
+    width: fit-content;
+}
+
+#wrapper nav{
+    width: 960px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgba(40, 40, 40, 0.5);
+    border-radius: 12px;
+    box-shadow: 3px 3px 4px;
+}
+
+#wrapper nav ul{
+    border: 1px solid blue;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+}
+
+#wrapper nav ul li{
+    height: 35px;
+    width: 80px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    background-image: radial-gradient(circle at center, #333 20%, #eee 70%);
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 2px 2px 3px black;
+    transition: ease-in-out 0.5s;
+}
+
+#wrapper nav ul li a{
+    text-decoration: none;
+    color: rgb(91, 211, 211);
+}
+
+#wrapper nav ul li:hover{
+    cursor: pointer;
+    background-image: radial-gradient(circle at center, blue 20%, lightblue 60%);
+    transform: scale(106%);
+    transition: transform 0.5s;
+}
+
+#wrapper nav ul li:hover > a{
+    color: yellow;
+    transition: transform 0.5s;
+}
+
+#mainSection{
+    width: 615px;
+    margin: 15px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    box-shadow: -3px -3px 4px #333;
+    float: left;
+}
+
+#mainSection h2, p{
+    margin: 10px;
+}
+
+#mainSection a.demo{
+    text-decoration: none;
+}
+
+#mainSection a.demo img{
+    width: 192px;
+    margin: 4px;
+    opacity: 40%;
+    border-radius: 12px;
+    box-shadow: 2px 2px 2px #888;
+    transition: ease-in-out 0.5s;
+}
+
+#mainSection a.demo img:hover{
+    opacity: 100%;
+    rotate: 5deg;
+    transition: ease-in-out 0.5s;
+}
+
+aside{
+    width: 310px;
+    margin: 12px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    box-shadow: -3px -3px 4px #333;
+    float: right;
+}
+
+aside #progressBar{
+    height: 20px;
+    margin: 15px;
+    background-color: rgb(38, 139, 38);
+    animation: progress 3s infinite;
+    overflow: hidden;
+}
+@keyframes progress {from{width: 1px;} to{width: 240px;}}
+
+form input[type="number"]{
+    width: 100px;
+}
+
+form input[type="submit"]{
+    font-weight: bold;
+    padding: 5px 15px;
+    margin: 10px;
+    background-color: #bbb;
+    border-radius: 8px;
+    box-shadow: 3px 3px 2px cyan, 6px 6px 2px black;
+    cursor: pointer;
+    border: transparent;
+    float: right;
+}
+
+aside ul li{
+    width: 60px;
+    height: 55px;
+    float: left;
+    list-style: none;
+    margin-top: 10px;
+    background-image: url(./img/socialNetworks.png);
+    transition: ease-in-out 0.5s;
+}
+
+aside ul li a{
+    width: inherit;
+    height: inherit;
+    background-image: url(./img/socialNetworks.png);
+}
+
+aside ul li:nth-of-type(2){
+    background-position: -60px 0px;
+}
+
+aside ul li:nth-of-type(3){
+    background-position: -120px 0px;
+}
+
+aside ul li:hover{
+    cursor: pointer;
+    transform: translate(0px, -57px);
+    transition: ease-in-out 0.5s;
+}
