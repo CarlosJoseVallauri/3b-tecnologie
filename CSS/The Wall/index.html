@@ -59,11 +59,15 @@
 				<input type="number" name="numCls" id="numCls" max="5" min="1" required><br><br>
 				
 				<label for="selSett">Settore</label>
-				<select id="selSett" name="selSett" required>
+				<input type="text" id="selSett" name="selSett" list="settori" required>
+				<datalist id="settori">
 					<option value="I">Informatica</option>
 					<option value="E">Elettrotecnica</option>
 					<option value="M">Meccatronica</option>
-				</select><br><br>
+				</datalist>
+
+
+				<br><br>
 				
 				<label for="ranDis">Distanza da Fossano (km):</label><br>
 				<span style="margin-right: 100px;">1</span><span>50</span><br>
