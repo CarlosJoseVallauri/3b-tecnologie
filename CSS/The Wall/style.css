@@ -151,6 +151,10 @@ form input[type="number"]{
     width: 100px;
 }
 
+form input[type="range"]{
+    width: 125px;
+}
+
 form input[type="submit"]{
     font-weight: bold;
     padding: 5px 15px;
