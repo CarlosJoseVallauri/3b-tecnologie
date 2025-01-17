@@ -183,16 +183,20 @@ aside ul li a{
     background-image: url(./img/socialNetworks.png);
 }
 
+aside ul li{
+    background-position: 0px var(--height, 0px);
+}
+
 aside ul li:nth-of-type(2){
-    background-position: -60px 0px;
+    background-position: -60px var(--height, 0px);
 }
 
 aside ul li:nth-of-type(3){
-    background-position: -120px 0px;
+    background-position: -120px var(--height, 0px);
 }
 
 aside ul li:hover{
     cursor: pointer;
-    transform: translate(0px, -57px);
+    --height: -50px;
     transition: ease-in-out 0.5s;
 }
