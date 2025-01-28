@@ -1,0 +1,232 @@
+@font-face {
+    font-family: Waltograph;
+    src: url("./font/waltograph.ttf");
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box;
+}
+
+body{
+    font-family: Verdana;
+    font-size: 10pt;
+    line-height: 16pt;
+    background-image: url("./img/sky.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wrapper{
+    width: 990px;
+    height: 100%;
+    padding: 0px 10px;
+    background-image: linear-gradient(#eef, #27f);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+header, nav, section, aside, fieldset{
+    border: 1px solid #bbf;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px #009;
+    padding: 10px;
+}
+
+nav, section, aside{
+    height: 720px;
+}
+
+header{
+    flex-basis: 100%;
+    padding: 20px;
+}
+
+header h1{
+    font-family: Waltograph;
+    font-size: 30pt;
+    text-shadow: 3px 3px 2px #009;
+    margin: 10px 5px;
+    color: #22f;
+    text-align: center;
+}
+
+nav{
+    width: 160px;
+    background-color: #369;
+    color: #ccf;
+}
+
+nav ul li{
+    width: 130px;
+    height: 45px;
+    margin: 10px;
+    background-image: radial-gradient(#f33, #3ff);
+    border: 1px solid #bbf;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px #009;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out 0.5s;
+}
+
+nav ul li a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #bbf;
+}
+
+nav ul li:hover{
+    transition: ease-in-out 0.5s;
+    background-color: #04a;
+    background-image: none;
+    transform: scale(110%);
+    cursor: pointer;
+}
+
+nav ul li:hover > a{
+    transform: inherit;
+    color: yellow;
+    text-decoration: underline;
+}
+
+section{
+    font-size: 8pt;
+    width: 540px;
+    background-color: rgba(255, 127, 246, 0.5);
+}
+
+section h1{
+    padding: 15px;
+    font-size: 20pt;
+    text-align: center;
+}
+
+section div{
+    column-count: 3;
+    column-gap: 15px;
+    column-rule: 1px solid black;
+}
+
+aside{
+    width: 160px;
+}
+
+aside h2{
+    margin: 10px 0px;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+aside #img{
+    width: 140px;
+    height: 220px;
+    background-origin: content-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("./img/booking.png");
+    padding: 8px;
+    animation: sfondo 3s steps(30) infinite;
+}
+@keyframes sfondo{
+    from{background-color: #27f;} 
+    25%{background-color: #04a;} 
+    50%{background-color: #008;} 
+    75%{background-color: #22f;} 
+    to{background-color: #27f;}}
+
+aside #img:hover{
+    background-image: url("./img/booking2.png");
+    cursor: pointer;
+}
+
+aside #news{
+    height: 150px;
+    overflow: auto;
+}
+
+fieldset{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+fieldset input[type="submit"]{
+    border-radius: 15px;
+    background-color: magenta;
+    border: 1px solid lightpink;
+    padding: 5px 8px;
+}
+
+@media screen and (max-width: 990px)
+{
+    aside{
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 810px)
+{
+    body #wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav{
+        width: 90vw;
+        height: fit-content;
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: fit-content;
+    }
+
+    nav h3, nav div, aside{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 560px)
+{
+    header h1{
+        font-size: 20pt;
+    }
+
+    section div{
+        column-count: 2;
+    }
+
+    nav{
+        width: 90vw;
+        height: fit-content;
+    }
+
+    nav ul{
+        width: 100%;
+        justify-content: center;
+    }
+
+    fieldset{
+        width: 90vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
