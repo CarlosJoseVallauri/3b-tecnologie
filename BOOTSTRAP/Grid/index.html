@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Grid</title>
+</head>
+<body>
+    <h1 class="mb-5">Bootstrap: Grid layout</h1>
+    <div class="container  text-center">
+        <div class="row border">
+            <h4>Layout BASE: larghezza colonne automatica</h4>
+        </div>
+
+        <div class="row">
+            <div class="col border bg-info">A</div>
+            <div class="col border bg-warning">B</div>
+            <div class="col border bg-danger">C</div>
+        </div>
+
+        <div class="row border">
+            <h4>Layout AVANZATO: modifica dimensioni colonne (arbitrario)</h4>
+        </div>
+
+        <div class="row">
+           <div class="col-8 border bg-info">X</div>     
+           <div class="col border bg-warning">Y</div>     
+           <div class="col border bg-danger">Z</div> 
+        </div>
+
+        <div class="row border">
+            <h4>Layout AVANZATO: modifica dimensioni colonne (screen size)</h4>
+        </div>
+
+        <div class="row">
+           <div class="col-sm-12 col-lg-2 col-md-8 border bg-primary">1</div>     
+           <div class="col border bg-secondary">2</div>     
+           <div class="col border bg-info">3</div> 
+           <div class="col border bg-success">4</div>     
+           <div class="col border bg-warning">5</div>     
+           <div class="col border bg-danger">6</div> 
+           <div class="col border bg-primary">7</div>     
+           <div class="col border bg-secondary">8</div>     
+           <div class="col border bg-info">9</div> 
+           <div class="col border bg-success">10</div>     
+           <div class="col border bg-warning">11</div>     
+           <div class="col-sm-12 col-lg-2 col-md-8 border bg-danger">12</div> 
+        </div>
+
+        <div class="row border">
+            <h4>Layout AVANZATO: utlizzo offset</h4>
+        </div>
+
+        <div class="row">
+            <div>
+                <div class="col-md-4 border bg-danger">F</div>     
+                <div class="col-md-4 border offset-md-4 bg-warning">G</div>     
+            </div> 
+        </div>
+    </div>
+</body>
+</html>
