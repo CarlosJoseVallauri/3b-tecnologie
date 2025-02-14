@@ -35,7 +35,7 @@ function gioca()
         {
             msg = "Numero inserito troppo piccolo " + numUser.toString();
         }
-        else
+        else if(numUser === numSegreto)
         {
             msg = "Numero indovinato!"
             vinto = true;
