@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../node_modules/bootstrap/dist/css/bootstrap.min.css'>
+    <script defer src='../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'></script>
+    <title>Form</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Bootstrap: componenti Form</h1>
+
+        <form>
+            <div class="mb-3">
+                <label for="usrEmail" class="form-label">Email</label>
+                <input type="email" name="usrEmail" id="usrEmail" class="form-control">
+                <div class="form-text">Inserisci la tua email</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="usrPwd" class="form-label">Password</label>
+                <input type="password" name="usrPwd" id="usrPwd" class="form-control">
+                <div class="form-text">Inserisci la tua password</div>
+            </div>
+
+            <div class="mb-3">
+                <input type="checkbox" name="chkDati" id="chkDati" class="form-check-input">
+                <label for="chkDati" class="form-check-label">Acconsento al trattamento dei miei dati</label>
+            </div>
+
+            <input type="submit" value="INVIA" class="btn btn-success form-control">
+        </form>
+
+        <h1 class="mt-4">Bootstrap: tipologie di input e componenti</h4>
+
+        <form>
+            <div class="mb-3">
+                <div class="input-group">
+                    <input type="email" name="txtMail" id="txtMail" class="form-control" placeholder="Inserisci email">
+                    <span class="input-group-text">@vallauri.edu</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-auto m-2">
+                    <div class="form-floating">
+                        <input type="text" name="txtScuola" id="txtScuola" class="form-control" placeholder="">
+                        <label for="txtScuola">Scuola di provenienza</label>
+                    </div>
+                </div>
+
+                <div class="col-auto m-2">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="drpDwnCat" data-bs-toggle="dropdown" aria-expanded="false">
+                        Seleziona categoria
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li><option value="Personale docente" class="dropdown-item">Personale docente</option></li>
+                        <li><option value="Personale ATA" class="dropdown-item">Personale ATA</option></li>
+                        <li><option value="Ufficio tecnico" class="dropdown-item">Ufficio tecnico</option></li>
+                        <li><option value=Studente" class="dropdown-item">Studente</option></li>
+                    </ul>
+                </div>
+
+                <div class="col-auto m-2">
+                    <div class="input-group">
+                        <span class="input-group-text">&euro;</span>
+                        <input type="number" name="numImp" id="numImp" placeholder="Importo da pagare" class="form-control">
+                        <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
