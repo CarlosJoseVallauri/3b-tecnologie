@@ -66,3 +66,11 @@ function generaNumero(a, b)
 {
     return Math.floor((b - a) * Math.random() + a);
 }
+
+function gestisciEnter(event) 
+{
+    if(event.key == "Enter")
+    {
+        gioca();
+    }
+}
