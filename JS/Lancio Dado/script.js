@@ -14,12 +14,22 @@ function genera()
     
     for(let i = 0; i < count; i++)
     {
-        let temp = Math.floor(6 * Math.random()) + 1;
+        let temp = Random(1, 7);
         counters[temp - 1]++;
     }
 
     for(let i = 0; i < 6; i++)
     {
-        msgs[i].innerText = counters[i];
+        let r = Random(0, 256);
+        let g = Random(0, 256);
+        let b = Random(0, 256)
+
+        msgs[i].style.color = `rgb(${r}, ${g}, ${b})`;
+        msgs[i].innerText = `Il numero ${i + 1} è uscito ${counters[i]} volte`;
     }
+}
+
+function Random(min, max)
+{
+    return Math.floor((max - min) * Math.random()) + min;
 }
