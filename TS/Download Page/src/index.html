@@ -51,7 +51,33 @@
                 </p>
 
                 <div id="codeSection">
+                    <h4>via npm</h4>
 
+                    <p>
+                        TypeScript is available as a package on the npm registry available as <code>"typescript"</code>.
+
+                        You will need a copy of Node.js as an environment to run the package. 
+                        Then you use a dependency manager like npm, yarn or pnpm to download TypeScript into your project.
+                    </p>
+
+                    <code id="codeExample">npm install typescript --save-dev</code>
+
+                    <button>npm</button>  <button>yarn</button>  <button>pnpm</button>
+                    
+                    <h4>with Visual Studio</h4>
+
+                    <p>
+                        For most project types, you can get TypeScript as a package in Nuget for your MSBuild projects, for example an ASP.NET Core app.
+
+                        When using Nuget, you can install TypeScript through Visual Studio using:
+
+                        The Manage NuGet Packages window (which you can get to by right-clicking on a project node)
+                        The Nuget Package Manager Console (found in Tools > NuGet Package Manager > Package Manager Console) and then running:
+                        <code>Install-Package Microsoft.TypeScript.MSBuild</code>
+
+                        For project types which don't support Nuget, you can use the TypeScript Visual Studio extension. 
+                        You can install the extension using <code>Extensions > Manage Extensions</code> in Visual Studio.
+                    </p>
                 </div>
             </section>
         </main>

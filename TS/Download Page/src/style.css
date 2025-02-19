@@ -5,12 +5,13 @@
 }
 
 body{
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: column;
     font-family: 'Segoe UI';
+    overflow-x: hidden;
 }
 
 body.light{
@@ -133,6 +134,15 @@ main{
 
         #codeSection{
             column-count: 2;
+            column-width: 200px;
+
+            #codeExample{
+                display: block;
+            }
+
+            button{
+                padding: 5px;
+            }
         }
     }
 }
