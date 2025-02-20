@@ -134,10 +134,33 @@ main{
 
         #codeSection{
             column-count: 2;
+            column-rule: 1px solid black;
             column-width: 200px;
 
-            #codeExample{
+            h4{
+                font-weight: normal;
+                margin-bottom: 10px;
+            }
+
+            p{
+                margin-bottom: 10px;
+            }
+
+            code{
+                font-family: 'Consolas';
+            }
+
+            .codeExample{
+                margin: 20px;
+                margin-left: 0;
                 display: block;
+                font-size: 12pt;
+            }
+
+            .codeText{
+                font-size: 12pt;
+                font-weight: 400 !important;
+                background-color: rgb(201, 225, 233);
             }
 
             button{
