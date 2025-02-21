@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../node_modules/bootstrap/dist/css/bootstrap.min.css'>
+    <script defer src='../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'></script>
+    <title>Alert e finestre modali</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="mb-3">Bootstrap: alert</h1>
+
+        <h3>Alert success</h3>
+        <div class="alert alert-success">
+            <strong>Successo!</strong>
+            <p>Operazione completata</p>
+        </div>
+
+        <h3>Alert warning con link</h3>
+        <div class="alert alert-warning" role="alert">
+            <strong>Attenzione!</strong>
+            <p>Operazione non sicura, <a href="#" class="alert-link">accedere</a> con un account amministratore</p>
+        </div>
+
+        <h3>Alert danger con dismissible</h3>
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <strong>Errore!</strong>
+            <p>Accedi per visualizzare il contenuto</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi"></button>
+        </div>
+
+        <h3>Alert con animazione</h3>
+        <div class="alert alert-primary alert-dismissible fade show">
+            <strong>Segnalazione ricevuta</strong>
+            <p>Il tuo feedback è stato ricevuto</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Chiudi"></button>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <h1 class="mb-3">Bootstrap: modal</h1>
+
+        <div class="row border p-3">
+            <div class="col">
+                <h3>Modal semplice</h3>
+                <button class="btn btn-primary" data-bs-target="#modal1" data-bs-toggle="modal">Apri</button>
+
+                <div class="modal" id="modal1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>Titolo del modal</h1>
+                                <button class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <p>Contenuto del modal</p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Chiudi">Chiudi</button>
+                                <button class="btn btn-success">Salva</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h3>Modal animato</h3>
+                <button class="btn btn-success" data-bs-target="#modal2" data-bs-toggle="modal">Apri</button>
+
+                <div class="modal fade" id="modal2">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>Titolo del modal</h1>
+                                <button class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <p>Contenuto del modal</p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Chiudi">Chiudi</button>
+                                <button class="btn btn-success">Salva</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <h3>Modal centrato e bloccato</h3>
+                <button class="btn btn-warning" data-bs-target="#modal3" data-bs-toggle="modal">Apri</button>
+
+                <div class="modal fade" id="modal3" data-bs-backdrop="static">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1>Titolo del modal</h1>
+                                <button class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+                            </div>
+
+                            <div class="modal-body">
+                                <p>Contenuto del modal</p>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Chiudi">Chiudi</button>
+                                <button class="btn btn-success">Salva</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
