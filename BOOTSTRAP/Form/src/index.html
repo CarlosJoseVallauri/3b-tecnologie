@@ -51,23 +51,61 @@
                 </div>
 
                 <div class="col-auto m-2">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="drpDwnCat" data-bs-toggle="dropdown" aria-expanded="false">
-                        Seleziona categoria
-                    </button>
-
-                    <ul class="dropdown-menu">
-                        <li><option value="Personale docente" class="dropdown-item">Personale docente</option></li>
-                        <li><option value="Personale ATA" class="dropdown-item">Personale ATA</option></li>
-                        <li><option value="Ufficio tecnico" class="dropdown-item">Ufficio tecnico</option></li>
-                        <li><option value=Studente" class="dropdown-item">Studente</option></li>
-                    </ul>
-                </div>
-
-                <div class="col-auto m-2">
-                    <div class="input-group">
+                    <div class="input-group h-100">
                         <span class="input-group-text">&euro;</span>
                         <input type="number" name="numImp" id="numImp" placeholder="Importo da pagare" class="form-control">
                         <span class="input-group-text">.00</span>
+                    </div>
+                </div>
+
+                <div class="col-auto m-2">
+                    <div class="input-group h-100">
+                        <label for="cmbUSer" class="input-group-text">Settore</label>
+                        <select id="cmbUser" class="form-select">
+                            <option selected value="Personale docente">Personale docente</option>
+                            <option value="Personale ATA">Personale ATA</option>
+                            <option value="Ufficio tecnico">Ufficio tecnico</option>
+                            <option value=Studente">Studente</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-auto">
+                    <div class="form-check form-switch">
+                        <input type="checkbox" id="chkAge" class="form-check-input">
+                        <label class="form-check-label" for="chkAge">Ho più di 18 anni</label>
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="rdM" name="rdGen" class="form-check-input">
+                        <label class="form-check-label" for="rdM">Maschio</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="rdF" name="rdGen" class="form-check-input">
+                        <label class="form-check-label" for="rdF">Femmina</label>
+                    </div>
+                </div>
+
+                <div class="col-auto">
+                    <label for="rngComp" class="form-label">Livello di competenza</label>
+                    <input type="range" id="rngComp" class="form-range" max="100" min="1" oninput="this.nextElementSibling.value = this.value">
+                    <output style="display: block;">50</output>
+                </div>
+
+                <div class="col-auto">
+                    <div class="input-group">
+                        <label for="selStu" class="input-group-text">Studi</label>
+                        <select id="selStu" class="form-select" size="3">
+                            <option>Diploma</option>
+                            <option>Laurea</option>
+                            <option>Magistrale</option>
+                            <option>PhD</option>                        
+                        </select>
                     </div>
                 </div>
             </div>
