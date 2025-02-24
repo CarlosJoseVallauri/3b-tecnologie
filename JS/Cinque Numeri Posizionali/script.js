@@ -3,7 +3,6 @@
 let comb = new Array(5);
 let nums = document.getElementsByName("txtNum");
 let leds = document.getElementsByName("chkNum");
-let gss = [];
 
 for(let i = 0; i < 5; i++)
 {
@@ -31,6 +30,8 @@ function controlla(event)
 
 function confrontaNumeri()
 {
+	let cnt = 0;
+	
     for(let i = 0; i < nums.length; i++)
     {
         if(nums[i].value == comb[i])
@@ -39,14 +40,11 @@ function confrontaNumeri()
             nums[i].disabled = "true";
             leds[i].checked = "true";
             
-            if(!gss.includes(i))
-            {
-                gss.push(i);
-            }
+            cnt++;
         }
     }
 
-    if(gss.length == 5)
+    if(cnt == 5)
     {
         document.getElementById("btnInvia").disabled = "true";
     }
