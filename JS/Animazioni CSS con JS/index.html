@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/javascript">
+
+        document.addEventListener("DOMContentLoaded", () => { // defer non funziona con i tag script inline, utilizzo quindi addEventListener -> DOMContentLoaded, che attende il caricamento degli elementi DOM.
+
+            document.querySelectorAll(".hidden").forEach((element, i) => { // querySelectorAll restituisce un array statico, che non varia anche se la pagina viene modificata in seguito e che può quindi avvalersi del metodo forEach.
+
+                setTimeout(() => element.classList.remove("hidden"), 2000 * (i + 1)); // forEach utilizza una arrow function, i cui parametri sono element e qualsiasi altro iteratore.
+                                                                                      // element non è la copia dell'elemento, ma una referenza diretta ad esso, perciò possiamo modificarne direttamente le proprietà.
+            });                                                                      
+        });
+
+    </script>
+    <title>Animazioni CSS e JS</title>
+</head>
+<body>
+    <div id="text1" class="text">
+        CSS
+    </div>
+
+    <div id="text2" class="text hidden">
+        IS
+    </div>
+
+    <div id="text3" class="text hidden">
+        AWESOME
+    </div>
+</body>
+</html>
