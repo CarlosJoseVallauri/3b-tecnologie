@@ -27,6 +27,11 @@ function controlla()
         return;
     }
 
+    for(let i = 0; i < chks.length; i++)
+    {
+        chks[i].checked = false;
+    }
+
     let z = 0;
 
     for(let i = 0; i < txts.length; i++)
