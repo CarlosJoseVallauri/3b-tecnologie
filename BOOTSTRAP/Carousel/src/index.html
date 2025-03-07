@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='../node_modules/bootstrap/dist/css/bootstrap.min.css'>
+    <script defer src='../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'></script>
+    <title>Carousel</title>
+</head>
+<body>
+    <div class="container-fluid mb-3 mt-3">
+        <h2 class="bg-warning text-center text-white">Bootstrap: carousel semplice</h2>
+
+        <div id="carouselBase" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="1000">
+                    <img src="../img/img01.jpg" alt="Img1" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="../img/img02.jpg" alt="Img2" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="../img/img03.jpg" alt="Img3" class="d-block w-100">
+                </div>    
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBase" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBase" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container-fluid mb-3">
+        <h2 class="bg-danger text-center text-white">Bootstrap: carousel avanzato</h2>
+
+        <div id="carouselAdv" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselAdv" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselAdv" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselAdv" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="1000">
+                    <img src="../img/img01.jpg" alt="Img1" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="../img/img02.jpg" alt="Img2" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="../img/img03.jpg" alt="Img3" class="d-block w-100">
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mb-3">
+        <h2 class="bg-primary text-center text-white">Bootstrap: carousel con testo</h2>
+
+        <div id="carouselText" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="1000">
+                    <img src="../img/img01.jpg" alt="Img1" class="d-block w-100">
+
+                    <div class="carousel-caption d-none d-md-block text-white">
+                        <h3>Prima slide</h3>
+                        <span>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Accusamus, obcaecati? Expedita nisi qui accusantium necessitatibus aliquam distinctio ducimus, voluptate beatae.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="../img/img02.jpg" alt="Img2" class="d-block w-100">
+
+                    <div class="carousel-caption d-none d-md-block text-white">
+                        <h3>Seconda slide</h3>
+                        <span>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Accusamus, obcaecati? Expedita nisi qui accusantium necessitatibus aliquam distinctio ducimus, voluptate beatae.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="1000">
+                    <img src="../img/img03.jpg" alt="Img3" class="d-block w-100">
+
+                    <div class="carousel-caption d-none d-md-block text-white">
+                        <h3>Terza slide</h3>
+                        <span>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Accusamus, obcaecati? Expedita nisi qui accusantium necessitatibus aliquam distinctio ducimus, voluptate beatae.
+                        </span>
+                    </div>
+                </div>    
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselText" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselText" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
