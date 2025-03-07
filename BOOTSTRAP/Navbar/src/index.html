@@ -7,19 +7,102 @@
     <script defer src='../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'></script>
     <title>Navbar</title>
 </head>
-<body>
-    <div class="container-fluid">
+<body class="p-2" style="height: 200vh;">
+     <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand">Logo</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbar4" aria-label="Navbar toggle">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar4">
+                    <ul class="navbar-nav me-2 mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Chi siamo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
+                    </ul>
+                </div>
+
+                <p class="navbar-brand m-0">Bootsrap: navbar fixed</p>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid mt-5">
         <h1>Bootsrap: navbar base</h1>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand">Logo</a>
-                <button></button>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbar1" aria-label="Navbar toggle">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <div class="collapse navbar-collapse" id="navbar1">
                     <ul class="navbar-nav me-2 mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Chi siamo</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid mt-3">
+        <h1>Bootsrap: navbar dark</h1>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand">Logo</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbar2" aria-label="Navbar toggle">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar2">
+                    <ul class="navbar-nav me-2 mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Chi siamo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid mt-3">
+        <h1>Bootsrap: navbar con dropdown</h1>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand">Logo</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbar3" aria-label="Navbar toggle">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbar3">
+                    <ul class="navbar-nav me-2 mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Chi siamo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-target="#dropMenu" aria-expanded="false">Menù</a>
+
+                            <ul class="dropdown-menu" id="dropMenu">
+                                <li><a href="" class="dropdown-item">Opzione 1</a></li>
+                                <li><a href="" class="dropdown-item">Opzione 2</a></li>
+                                <li><a href="" class="dropdown-item">Opzione 3</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
