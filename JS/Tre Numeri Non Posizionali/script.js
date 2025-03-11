@@ -1,9 +1,10 @@
 "use strict";
 
-let txts = document.getElementsByName("txtN");
+let txts = Array.from(document.getElementsByName("txtN"));
 let chks = document.getElementsByName("chkN");
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let combAI = [];
+let v;
 
 for(let i = 0; i < 3; i++)
 {
