@@ -1,6 +1,5 @@
 "use strict";
 const http = require("node:http");
-const os = require("node:os");
 const fs = require("node:fs");
 const server = http.createServer((req, res) => {
     if(req.url === '/'){ // Se la connessione richiede la home, mostra 'Hello world!'
