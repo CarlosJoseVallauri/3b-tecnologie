@@ -1,0 +1,53 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+h1{
+	margin:25px;
+	text-align:center;
+}
+
+
+/* ******************************************** */
+
+.wrapper{
+	width: 800px;
+	border: 1px solid black;
+	margin: 15px 60px;
+	padding:20px;
+	box-shadow: 2px 2px 3px  black;	
+	background-color: #AFA;
+}
+
+#container1{
+	width:500px;
+	margin: 30px auto;
+	user-select:none;
+}
+
+#container1 h1{
+	font-size:14pt;
+	text-align:left;
+	margin-left:0;
+}
+
+#container1 div{
+	width:150px;
+	height:150px;
+	border: 3px solid #AFA;
+	display:inline-block;
+	background-size:cover;
+	background-position:center;
+}
+
+
+#btnVerifica{
+	font-size:14pt;		
+	font-weight:bold;
+	width:130px;
+	padding:5px;
+	display:block;
+	margin:20px 0px;
+}
+
