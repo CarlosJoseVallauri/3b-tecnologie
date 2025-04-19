@@ -41,7 +41,8 @@ function verifyWin(){
 		}
 	}
 
-	result.style.textColor = "red";
+	result.style.color = "red";
+	result.style.fontWeight = "bold";
 	result.textContent = "Bravo hai indovinato!";
 	verBtn.disabled = true;
 }
