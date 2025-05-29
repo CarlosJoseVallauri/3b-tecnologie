@@ -43,7 +43,7 @@ function generateBoard(){
             d: prevI === 9 || FIELD[prevI + 1][prevJ].isWall === true,
             l: prevJ === 0 || FIELD[prevI][prevJ - 1].isWall === true,
             r: prevJ === 9 || FIELD[prevI][prevJ + 1].isWall === true
-            } : null);
+        } : null);
 
         if(prevBomb && FIELD[prevI + DIRECTION.r][prevJ + DIRECTION.c].isWall === true){
             contInside++;
