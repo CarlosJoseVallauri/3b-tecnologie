@@ -39,24 +39,29 @@ function generateBoard(){
         }
         
         const DIRECTION = getMovement(prevBomb ? {
-            u: prevI === 0 || FIELD[prevI - 1][prevJ].isWall === true,
-            d: prevI === 9 || FIELD[prevI + 1][prevJ].isWall === true,
-            l: prevJ === 0 || FIELD[prevI][prevJ - 1].isWall === true,
-            r: prevJ === 9 || FIELD[prevI][prevJ + 1].isWall === true
+            u: prevI === 0,
+            d: prevI === 9,
+            l: prevJ === 0,
+            r: prevJ === 9
         } : null);
 
         if(prevBomb && FIELD[prevI + DIRECTION.r][prevJ + DIRECTION.c].isWall === true){
             contInside++;
-        }
-        if(contInside == 15){
-            clearInterval(intervalID);
-            alert("Hai vinto!");
-        }
 
-        const i = (prevBomb ? prevI  + DIRECTION.r : random(0, SIZE));
-        const j = (prevBomb ? prevJ  + DIRECTION.c : random(0, SIZE));
+            if(contInside == 15){
+                clearInterval(intervalID);
+                const img = document.createElement("img");
+                img.src = "bomba.png";
+                prevBomb.appendChild(img);
+                alert("Hai vinto!");
+            }
+        }
+        else{
+            const i = (prevBomb ? prevI  + DIRECTION.r : random(0, SIZE));
+            const j = (prevBomb ? prevJ  + DIRECTION.c : random(0, SIZE));
 
-        FIELD[i][j].isBomba = true;
+            FIELD[i][j].isBomba = true;
+        }
     }, 150);
 }
 
