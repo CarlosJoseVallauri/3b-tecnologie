@@ -32,7 +32,7 @@ function generateBoard(){
         const prevBomb = FIELD.flat().find(btn => btn.isBomba);
         let prevI, prevJ;
 
-       if(prevBomb){
+        if(prevBomb){
             prevBomb.isBomba = false;
             prevI = prevBomb.location.r;
             prevJ = prevBomb.location.c;
