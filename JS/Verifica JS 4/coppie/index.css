@@ -1,0 +1,50 @@
+h1{
+    text-align:center;
+}
+
+
+#wrapper{
+	margin-top:30px;
+	text-align:center;
+}
+
+.container{
+    width:200px;
+    height:200px;
+    border:0px solid red;
+	user-select:none;
+	margin:20px auto;
+}
+
+
+.cella {
+    width: 42px;
+    height: 42px;
+    margin: 3px;
+    padding: 0;
+    border: 1px solid #AAA;
+    font-size: 16pt;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+button{
+	display: inline-block;
+	vertical-align:middle;
+    width:100px;
+	height: 42px;
+	margin:15px 15px;
+    background-color : yellow;
+	border: 1px solid #AAA;
+    border-radius : 20px;
+	
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: center;
+	cursor:pointer;
+}
+
+
