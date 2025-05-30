@@ -4,6 +4,7 @@ const SIZE = 4;
 const WRAPPER = document.querySelector(".container");
 const BUTTON = document.querySelector("button");
 let intervalID;
+let running = false;
 
 generateField();
 
@@ -22,7 +23,12 @@ function generateField(){
 }
 	
 function startGame(){
+	if(running){
+		return;
+	}
+
 	let counter = 0;
+	running = true;
 
 	intervalID = setInterval(function(){
 		const cell = document.getElementById(`div-${random(0, 4)}-${random(0, 4)}`);
@@ -34,6 +40,7 @@ function startGame(){
 		if(++counter === 80){
 			clearInterval(intervalID);
 			checkCells();
+			running = false;
 		}
 
 	}, 50, counter);
