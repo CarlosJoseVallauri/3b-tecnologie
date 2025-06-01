@@ -31,11 +31,14 @@ function startGame(){
 	running = true;
 
 	intervalID = setInterval(function(){
-		const cell = document.getElementById(`div-${random(0, 4)}-${random(0, 4)}`);
+		let cell;
 
-		if(cell.style.backgroundColor !== "gray"){
-			cell.textContent = random(0, 4);
+		do{
+			cell = document.getElementById(`div-${random(0, 4)}-${random(0, 4)}`);
 		}
+		while(cell.style.backgroundColor === "gray")
+
+		cell.textContent = random(0, 4);
 
 		if(++counter === 80){
 			clearInterval(intervalID);
