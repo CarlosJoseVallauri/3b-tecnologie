@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"name": "WDC500",
+		"runningOs": "debian",
+		"size": 500
+	},
+	{
+		"id": 2,
+		"name": "WDC500",
+		"runningOs": "batocera",
+		"size": 500
+	},
+	{
+		"id": 3,
+		"name": "SeagateThin",
+		"runningOs": "fedora",
+		"size": 500
+	}
+]
