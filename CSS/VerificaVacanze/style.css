@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    line-height: 160%;
+}
+
+body{
+    background-image: url("./img/sky.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#main-title{
+    color: blue;
+    font-weight: bold;
+    text-shadow: 3px 3px black;
+    text-align: center;
+    font-size: 30pt;
+    margin: 50px 0;
+}
+
+header{
+    background-color: rgba(20, 12, 231, 0.4);
+    margin: 15px;
+    border-radius: 12px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    h1{
+        color: lightblue;
+    }
+}
+
+ul{
+    border: 2px solid red;
+    display: flex;
+    width: fit-content;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+li.nav-btn{
+    list-style: none;
+    height: fit-content;
+    width: fit-content;
+    margin: 0 5px;
+} 
+
+li.nav-btn > a{
+    height: 70px;
+    width: 160px;
+    background-image: radial-gradient(lightgrey, blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 12px;
+    text-decoration: none;
+    color: lightskyblue;
+    font-weight: bold;
+}
+
+#wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+
+#intro{
+    background-color: rgba(200, 200, 200, 0.8);
+    margin: 15px;
+    border-radius: 12px;
+    grid-column: span 2 / span 2;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#news{
+    grid-row: span 5 / span 5;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 400px;
+}
+
+#form{
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    margin: 15px;
+    background-color: rgba(200, 200, 200, 0.8);
+    border-radius: 12px;
+    padding: 15px;
+
+    h1{
+        margin: 10px 0;
+    }
+}
+
+#lorem{
+    overflow-y: scroll;
+    width: 190px;
+    height: 300px;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    label{
+        margin-bottom: 10px;
+    }
+}
+
+img{
+    width: 300px;
+    height: 200px;
+}
+
+img[src="./img/penguin.jpg"]{
+    rotate: 12deg;
+    margin-top: 20px;
+}

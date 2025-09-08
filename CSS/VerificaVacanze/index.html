@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vacanze</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <h1 id="main-title">Esercizio preparazione verifica HTML5 CSS3</h1>
+    <header>
+        <nav>
+            <h1>Visita le nostre pagine</h1>
+            <ul>
+                <li class="nav-btn"><a href="#">Registrazione</a></li>
+                <li class="nav-btn"><a href="#">I nostri servizi</a></li>
+                <li class="nav-btn"><a href="#">I nostri archivi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="wrapper">
+        <section id="intro">
+            <h1>Introduzione al sito</h1>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Eius quisquam ab animi harum deserunt assumenda vel voluptatum provident.
+            Id, repellendus eaque quis corporis voluptatem itaque odit sit aut quaerat atque!
+        </section>
+
+        <aside id="news">
+            <h1>News</h1>
+            <section id="lorem">
+                Lorem ipsum dolor.
+                Lorem ipsum dolor.
+                Lorem ipsum dolor.
+                Lorem ipsum dolor.
+                Lorem ipsum dolor.
+                Lorem ipsum dolor.
+                Lorem ipsum dolor.
+                Lorem ipsum dolor.
+                Lorem ipsum dolor.
+                Lorem ipsum dolor.
+                Lorem ipsum dolor.
+                Lorem ipsum dolor.
+                Lorem ipsum dolor.
+            </section>
+
+            <section>
+                <h1>Ultime novità sui penguini</h1>
+                <img src="./img/penguin.jpg" alt="">
+            </section>
+
+            <section>
+                <h1>L'intelligenza dei koala</h1>
+                <img src="./img/koala.jpg" alt="">
+            </section>
+        </aside>
+
+
+        <section id="form">
+            <h1>Inserisci i tuoi dati</h1>
+            <form name="frmCommenti">
+                <fieldset name="dati-utente">
+                    <legend>Informazioni anagrafiche</legend>
+                    <label>
+                        Nome:
+                        <input type="text" name="nome" autocomplete="on">
+                    </label>
+                    <label>
+                        Cognome:
+                        <input type="text" name="cogn" autocomplete="on">
+                    </label>
+                    <label>
+                        Et&agrave;:
+                        <input type="number" name="age" min="13" max="130" step="1">
+                    </label>
+                    <label>
+                        Peso:
+                        <input type="number" name="wei" step="1">
+                    </label>
+                    <label>
+                        Occupazione:
+                        <input type="text" name="job">
+                    </label>
+                </fieldset>
+
+                <fieldset name="dati-hobbies">
+                    <legend>Hobbies</legend>
+                    <label>
+                        Sport preferito:
+                        <input type="text" name="sport">
+                    </label>
+                    <label>
+                        Indirizzo mail:
+                        <input type="email" name="mail">
+                    </label>
+                    <label>
+                        Sito personale:
+                        <input type="url" name="www">
+                    </label>
+                </fieldset>
+
+                <input type="reset" value="Resetta la form">
+                <input type="submit" value="Invia il commento">
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
