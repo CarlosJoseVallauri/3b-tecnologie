@@ -1,5 +1,4 @@
 import { IncomingMessage, ServerResponse, createServer } from "http"
-import fs from "fs";
 import {promises as fsp} from "fs";
 import { Socket } from "net";
 
@@ -8,6 +7,13 @@ interface HardDrive{
     name: string,
     runningOs: string,
     size: number
+}
+
+function isValidDrive(Drive: any): Drive is HardDrive{
+    return  Object.keys(Drive).length === 3 &&
+           'name' in Drive &&
+           'runningOs' in Drive &&
+           'size' in Drive;
 }
 
 const DATABASE = '../database/hard_drives.json';
@@ -44,12 +50,31 @@ const server = createServer(async (req: IncomingMessage, res: ServerResponse) =>
                 res.end(
                     `
                         <!DOCTYPE html>
-                        <h1>Hard Disk Manager</h1>
-                        <div>
-                            <table id="main-table" border=1>
-                               ${formattedData}
-                            </table>
-                        </div>
+                        <html>
+                            <head>
+                                <title>Hard Disk Manager</title>
+                                <style>
+                                    table{
+                                        border: 1px solid black;
+                                        border-radius: 12px;
+                                        border-spacing: 12px;
+                                        padding: 3px;
+                                    }
+                                    td{
+                                        padding: 5px;
+                                        border-bottom: 1px solid black;
+                                    }
+                                </style>
+                            </head>
+                            <body>
+                                <h1>Hard Disk Manager</h1>
+                                <div>
+                                    <table id="main-table">
+                                        ${formattedData}
+                                    </table>
+                                </div>
+                            </body>
+                        </html>
                     `
                 )
             }
@@ -65,8 +90,14 @@ const server = createServer(async (req: IncomingMessage, res: ServerResponse) =>
                     
                     try {
                         const newDrive: HardDrive = JSON.parse(body);
+
+                        if(!isValidDrive(newDrive)){
+                            res.writeHead(400, { "Content-Type": "application/json" });
+                            res.end(JSON.stringify({ error: "Invalid drive" }))
+                            return;
+                        }
                         
-                        const successWrite = await writeDatabase(newDrive);
+                        const successWrite : boolean = await writeDatabase(newDrive);
 
                         if(successWrite){
                             res.writeHead(200, { "Content-Type": "application/json" });
@@ -74,13 +105,49 @@ const server = createServer(async (req: IncomingMessage, res: ServerResponse) =>
                         }
                         else{
                             res.writeHead(400, { "Content-Type": "application/json" });
-                            res.end(JSON.stringify({ message: "Error, drive not added" }));
+                            res.end(JSON.stringify({ error: "Drive not added" }));
                         }
                     } 
                     catch (error) {
                         console.error(`Error parsing JSON: ${error}`);
                         res.writeHead(400, { "Content-Type": "application/json" });
-                        res.end(JSON.stringify({ error: "Invalid Hard Drive" }));
+                        res.end(JSON.stringify({ error: "Invalid JSON format" }));
+                    }
+                });
+                
+                req.on('error', (error) => {
+                    console.error(`Request error: ${error}`);
+                    res.writeHead(500, { "Content-Type": "application/json" });
+                    res.end(JSON.stringify({ error: "Server error" }));
+                });
+            }
+            else if(req.method === "DELETE"){
+                let body : string = '';
+                
+                req.on('data', (chunk: string) => {
+                    body += chunk;
+                });
+                
+                req.on('end', async () => {
+                    console.log(`Received DELETE data: ${body}`);
+                    
+                    try {
+                        const deleteId: number = JSON.parse(body).id;         
+                        const successDelete : boolean = await deleteDrive(deleteId);
+
+                        if(successDelete){
+                            res.writeHead(200, { "Content-Type": "application/json" });
+                            res.end(JSON.stringify({ message: "Drive removed" }));
+                        }
+                        else{
+                            res.writeHead(400, { "Content-Type": "application/json" });
+                            res.end(JSON.stringify({ error: "Drive not removed" }));
+                        }
+                    } 
+                    catch (error) {
+                        console.error(`Error parsing JSON: ${error}`);
+                        res.writeHead(400, { "Content-Type": "application/json" });
+                        res.end(JSON.stringify({ error: "Invalid JSON format" }));
                     }
                 });
                 
@@ -115,6 +182,7 @@ console.info("Listening on port: 8000");
 async function writeDatabase(newDrive: HardDrive) : Promise<boolean>{
     try{
         let Data: HardDrive[] = await readDatabase();
+        newDrive.id = Data[Data.length - 1].id + 1;
 
         Data.push(newDrive);
         await fsp.writeFile(DATABASE, JSON.stringify(Data, null, '\t'));
@@ -142,4 +210,24 @@ async function readDatabase() : Promise<HardDrive[]>{
     }
 
     return Data;
+}
+
+async function deleteDrive(ID:number): Promise<boolean> {
+    try{
+        let Data: HardDrive[] = await readDatabase();
+        let IDDrive: HardDrive | undefined = Data.find(Drive => Drive.id == ID);
+
+        if(IDDrive === undefined){
+            return false;
+        }
+
+        Data = Data.filter(Drive => Drive != IDDrive);
+        await fsp.writeFile(DATABASE, JSON.stringify(Data, null, '\t'));
+
+        return true;
+    }
+    catch(error){
+        console.info(`Error ${error} writing to database.`);
+        return false;
+    }
 }

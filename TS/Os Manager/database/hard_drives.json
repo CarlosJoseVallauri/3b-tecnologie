@@ -16,5 +16,11 @@
 		"name": "SeagateThin",
 		"runningOs": "fedora",
 		"size": 500
+	},
+	{
+		"name": "SeagateThin",
+		"runningOs": "bazzite",
+		"size": 500,
+		"id": 4
 	}
 ]
