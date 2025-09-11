@@ -7,7 +7,7 @@ window.onload= function(){
 	let button = document.getElementsByTagName("button")[0];
 	let log = document.getElementById("log");
 
-	let dataCorrente = new Date();
+	let dataCorrente = deleteOffset(new Date());
 
 	txtData1.valueAsDate = dataCorrente;
 	txtData2.value = dataCorrente.toISOString().substring(0, 19);
@@ -43,4 +43,8 @@ window.onload= function(){
 		log.innerHTML += `Giorni ${diff.days()} Ore ${diff.hours() - Date2.getTimezoneOffset() / 60} Minuti ${diff.minutes()}`;
 	})
 
+}
+
+function deleteOffset(currentDate){
+	return new Date(currentDate.getTime() - currentDate.getTimezoneOffset() * 60 * 1000);
 }
