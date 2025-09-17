@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Music Player</title>
+
+    <!-- Bootstrap -->
+    <link rel='stylesheet' href='./node_modules/bootstrap/dist/css/bootstrap.min.css'>
+    <script defer src='./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'></script>
+    <link rel='stylesheet' href='./node_modules/bootstrap-icons/font/bootstrap-icons.min.css'>
+
+    <!-- Local Files -->
+    <link rel="stylesheet" href="index.css">
+    <script defer src="songs.js"></script>
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <!-- Barra di navigazione Blu in alto -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+				<!-- icon and title-->
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-boombox-fill me-2"></i>
+                    Music Player
+                </a>
+				<!-- Burger Button che compare quando si restringe la pagina -->
+                <button class="navbar-toggler" data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+				<!-- buttons -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+					<!-- me = margin end (right) : impostato al valore auto 
+					     mb = margin bottom : margin 0 per i teminali >= lg e 
+						 1/2 spacer in tutti gli altri casi -->				
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Libreria</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown">
+                                Categorie
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="#">All</a></li>
+                                <li><a class="dropdown-item" href="#">Pop</a></li>
+                                <li><a class="dropdown-item" href="#">Rap</a></li>
+                                <li><a class="dropdown-item" href="#">Rock</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+					<!-- 2° contenitore automaticamente allineato a destra -->
+                    <div class="d-flex">
+						<!-- icona amici -->
+                        <i class="bi bi-people-fill me-2" id="i-friends"></i>
+						<!-- icona search -->
+                        <i class="bi bi-search" id="i-search"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="modal" id="play-modal" tabindex="-1" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="exampleModalLabel">Ti piacerebbe!</h1>
+            <button class="btn-close" data-bs-dismiss="modal"> </button>
+          </div>
+          <div class="modal-body">
+            Paga qualche servizio di streaming vero se vuoi ascoltare <span id="song-title-modal"></span>.
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <main class="container">
+		<!-- DIV nascosto relativo agli amici -->
+        <div class="alert alert-warning d-none my-2 text-center" id="alert-friends">
+            Mi spiace, purtroppo non hai amici 
+			<i class="bi bi-emoji-frown-fill"></i>
+        </div>
+		<!-- DIV nascosto relativo al search -->
+        <input type="search" placeholder="Cerca..." class="w-100 my-2 d-none" id="txt-search"/>
+
+        <h1>I miei dischi preferiti</h1>
+		<div id="content"> </div>
+    </main>
+</body>
+
+</html>
