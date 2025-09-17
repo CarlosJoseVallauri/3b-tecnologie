@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Film Library</title>
+
+    <!-- Bootstrap -->
+    <link rel='stylesheet' href='./node_modules/bootstrap/dist/css/bootstrap.min.css'>
+    <link rel='stylesheet' href="./node_modules/bootstrap-icons/font/bootstrap-icons.min.css"></link>
+    <script defer src='./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'></script>
+
+    <!-- Local Files -->
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <!-- Modale conteggio Film -->
+    <div class="modal fade" id="modal-count-films" tabindex="-1" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Numero di film</h5>
+					<!-- data-bs-dismiss fa sì che il button chiuda la modale -->
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Ci sono <span id="span-n-films"></span> film nella libreria</p>
+                </div>
+				<div class="modal-footer">
+					<button class="btn btn-danger" data-bs-dismiss="modal">Chiudi</button>
+				</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Barra di navigazione Blu in alto -->
+	<header>
+		<!-- padding x = 1/2 spacer -->
+        <nav class="navbar bg-primary navbar-dark navbar-expand-md  px-2">
+            <div class="container-fluid">
+			    <!-- icon and title-->
+                <a class="navbar-brand" href="#">
+					<i class="bi bi-collection-play me-2"></i>
+					Film Library
+				</a>
+				<!-- Burger Button che compare quando si restringe la pagina -->
+                <button class="navbar-toggler" data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>				
+				<!-- buttons -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+					<!-- me = margin end (right) : impostato al valore auto 
+					     mb = margin bottom : margin 0 per i teminali lg e 1/2 spacer in tutti gli altri casi -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Details</a>
+                        </li>
+                    </ul>
+					<!-- 2° contenitore automaticamente allineato a destra -->
+                    <div>
+						<!-- icona di login -->
+                        <i class="bi bi-person-circle iconagrande text-light" id="btn-login" onclick="javascript:showLogin();"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid">
+	    <!-- visualizzato da js in corrispondenza del click sul pulsante di login -->
+        <div class="alert alert-danger d-none alert-dismissible my-2 text-center" id="alert-login">
+		    <!--  d-none significa display:none -->
+            <i class="bi bi-exclamation-triangle"></i> 
+			Login fallito. Riprova più tardi.
+			<button class="btn-close"></button>
+        </div>
+        <div class="row">
+			<!-- Nei terminali >= md il DIV occupa 3 celle.
+			     Nei terminali  < md il DIV occupa l'intera riga 
+				 my = margin asse y, cioè TOP e BOTTOM impostati a 1/2 spacer -->
+            <div class="col-md-3 my-2">
+                <button class="btn btn-secondary w-100" id="btn-add" onclick="javascript:newFilm();">Aggiungi Film</button>
+            </div>
+            <div class="col-md-3 my-2">
+				<!-- 100% del genitore -->
+                <button class="btn btn-secondary w-100" id="btn-clear" onclick="javascript:loadFilms([]);">Pulisci Lista</button>
+            </div>
+            <div class="col-md-3 my-2">
+                <button class="btn btn-secondary w-100" id="btn-reload" onclick="javascript:location.reload();">Ricarica Lista</button>
+            </div>
+            <div class="col-md-3 my-2">
+                <button class="btn btn-secondary w-100" id="btn-count" onclick="javascript:countFilms();">Conta Film</button>
+            </div>
+        </div>
+        <div class="row">
+            <h1>I miei film</h1>
+        </div>
+		<!-- px = padding asse x cioè LEFT e RIGHT impostati a 1/2 spacer -->
+        <div class="row px-2">
+            <table class="table" id="film-table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Titolo</th>
+                        <th>Preferito</th>
+                        <th>Data Di Visione</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    </main>
+</body>
+
+</html>
