@@ -124,9 +124,9 @@ function addListeners(){
 
     NEWBOOK.querySelector("button.btn.btn-success").addEventListener("click", function(){
         const INPUTS = NEWBOOK.querySelectorAll("input[type=text]");
-        let book = new Array(biblioteca[0].length);
+        let book = new Array(7);
 
-        for(let i = 0; i < biblioteca[0].length; i++){
+        for(let i = 0; i < 7; i++){
             book[i] = INPUTS[i].value;
         }
 
