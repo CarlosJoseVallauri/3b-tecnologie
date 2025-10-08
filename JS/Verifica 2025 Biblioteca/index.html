@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Book Library</title>
+
+    <!-- Bootstrap -->
+    <link rel='stylesheet' href='./node_modules/bootstrap/dist/css/bootstrap.min.css'>
+    <script defer src='./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'></script>
+    <link rel='stylesheet' href='./node_modules/bootstrap-icons/font/bootstrap-icons.min.css'>
+
+    <!-- Local Files -->
+    <link rel="stylesheet" href="./index.css">
+    <script src="./biblioteca.js"></script>
+    <script defer src="./index.js"></script>
+</head>
+
+<body>
+    <!-- Modale Dettagli -->
+    <div class="modal fade" id="modal-details" tabindex="-1" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Dettagli</h5>
+					<!-- data-bs-dismiss fa sì che il button chiuda la modale -->
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card shadow p-3">
+
+					</div>
+                </div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Chiudi</button>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modale Nuovo Film -->
+    <div class="modal fade" id="modal-add-newbook" tabindex="-1" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New Book</h5>
+					<!-- data-bs-dismiss fa sì che il button chiuda la modale -->
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card shadow p-3">
+						<div> <!-- contenitore dei dettagli -->   
+							<div class="row mb-2">
+							  <div class="col-4 fw-bold text-end">Id</div>
+							  <div class="col-8"><input type="text" class="form-control"></div>
+							</div>
+
+							<div class="row mb-2">
+							  <div class="col-4 fw-bold text-end">Titolo</div>
+							  <div class="col-8"><input type="text" class="form-control"></div>
+							</div>
+
+							<div class="row mb-2">
+							  <div class="col-4 fw-bold text-end">Autore</div>
+							  <div class="col-8"><input type="text" class="form-control"></div>
+							</div>
+
+							<div class="row mb-2">
+							  <div class="col-4 fw-bold text-end">Anno</div>
+							  <div class="col-8"><input type="text" class="form-control"></div>
+							</div>
+
+							<div class="row mb-2">
+							  <div class="col-4 fw-bold text-end">Genere</div>
+							  <div class="col-8"><input type="text" class="form-control"></div>
+							</div>
+
+							<div class="row mb-2">
+							  <div class="col-4 fw-bold text-end">Pagine</div>
+							  <div class="col-8"><input type="text" class="form-control"></div>
+							</div>
+
+							<div class="row mb-2">
+							  <div class="col-4 fw-bold text-end">Copie Vendute</div>
+							  <div class="col-8"><input type="text" class="form-control"></div>
+							</div>
+
+							<div class="row mb-2">
+							  <div class="col-4 fw-bold text-end">Copertina</div>
+							  <div class="col-8"><input type="text" class="form-control"></div>
+							</div>
+						</div>
+					</div>                    
+                </div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Chiudi</button>
+					<button type="button" class="btn btn-success">Salva</button>
+				</div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Barra di navigazione -->
+	<header>
+        <nav class="navbar bg-primary navbar-dark navbar-expand-md  px-2 fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+					<i class="bi bi-journals  me-2"></i>
+					Book Library
+				</a>
+				<!-- Burger Button che compare quando si restringe la pagina -->
+                <button class="navbar-toggler" data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>				
+				<!-- buttons -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                             <button class="btn btn-primary" style="font-size:12pt;">New Book</button>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-primary nav-link dropdown-toggle text-white" style="font-size:13pt; padding-top:5.1px;" href="#"  data-bs-toggle="dropdown">
+                                Categories
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="#">All</a></li>
+                                <li><a class="dropdown-item" href="#">Fantasy</a></li>
+                                <li><a class="dropdown-item" href="#">Romanzo</a></li>
+                                <li><a class="dropdown-item" href="#">Distopico</a></li>
+                                <li><a class="dropdown-item" href="#">Storico</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+					<!-- 2° contenitore automaticamente allineato a destra -->
+                    <div>
+						<!-- icona di login -->
+                        <i class="bi bi-person-circle fs-4 text-light" id="btnLogin"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid" style="padding-top:56px;">
+	    <!-- LOGIN alert -->
+        <div class="alert alert-danger d-none alert-dismissible my-2 text-center" id="alert-login">
+            <i class="bi bi-exclamation-triangle"></i> 
+			Login fallito. Riprova più tardi.
+			<button type="button" class="btn-close"></button>
+        </div>
+		
+        <div class="row">
+            <h1 class="text-center py-5" style="font-size:3rem;">Biblioteca Fossanese</h1>
+        </div>
+		
+        <!-- Tabella principale-->
+		<div class="row px-2">
+            <table class="table" id="film-table">
+                <thead>
+                    <tr>
+                        <th width="10%">id</th>
+                        <th width="28%">Titolo</th>
+                        <th width="22%">Autore</th>
+                        <th width="15%">Genere</th>
+                        <th width="15%">CopieVendute</th>
+						<th width="5%"> <!-- lente --> </th>
+						<th width="5%"> <!-- cestino --> </th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    </main>
+</body>
+
+</html>
