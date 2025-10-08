@@ -42,7 +42,7 @@ function loadBooks(genre){
 
             const IMG = document.createElement("img");
             IMG.classList.add("mx-auto", "d-block", "mb-3", "w-50");
-            IMG.setAttribute("src", `./img/${book[1].replaceAll("'", "_").replaceAll(" ", "_").toLowerCase()}.jpg`);
+            IMG.setAttribute("src", `./img/${book[7]}`);
             IMG.setAttribute("alt", book[1]);
             CARD.append(IMG);
 
@@ -124,13 +124,9 @@ function addListeners(){
 
     NEWBOOK.querySelector("button.btn.btn-success").addEventListener("click", function(){
         const INPUTS = NEWBOOK.querySelectorAll("input[type=text]");
-        let book = new Array(7);
-
-        for(let i = 0; i < 7; i++){
-            book[i] = INPUTS[i].value;
-        }
-
-        biblioteca.push(book);
+        biblioteca.push([...INPUTS].map(function(input){
+            return input.value;
+        }));    
         loadBooks("All");
         setActive(document.querySelector("ul.dropdown-menu > li > a.dropdown-item:first-of-type"));
         NEWBOOKMODAL.hide();
