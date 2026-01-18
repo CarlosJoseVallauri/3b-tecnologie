@@ -39,8 +39,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var http_1 = require("http");
 var fs_1 = require("fs");
 function isValidDrive(Drive) {
-    return Object.keys(Drive).length === 4 &&
-        'id' in Drive &&
+    return Object.keys(Drive).length === 3 &&
         'name' in Drive &&
         'runningOs' in Drive &&
         'size' in Drive;
@@ -67,7 +66,7 @@ var server = (0, http_1.createServer)(function (req, res) { return __awaiter(voi
                     formattedData_1 +=
                         "\n                    <tr>\n                        <td>".concat(Drive.id, "</td>\n                        <td>").concat(Drive.name, "</td>\n                        <td>").concat(Drive.runningOs, "</td>\n                        <td>").concat(Drive.size, "</td>\n                    </tr>\n                    ");
                 });
-                res.end("\n                        <!DOCTYPE html>\n                        <h1>Hard Disk Manager</h1>\n                        <div>\n                            <table id=\"main-table\" border=1>\n                               ".concat(formattedData_1, "\n                            </table>\n                        </div>\n                    "));
+                res.end("\n                        <!DOCTYPE html>\n                        <html>\n                            <head>\n                                <title>Hard Disk Manager</title>\n                                <style>\n                                    table{\n                                        border: 1px solid black;\n                                        border-radius: 12px;\n                                        border-spacing: 12px;\n                                        padding: 3px;\n                                    }\n                                    td{\n                                        padding: 5px;\n                                        border-bottom: 1px solid black;\n                                    }\n                                </style>\n                            </head>\n                            <body>\n                                <h1>Hard Disk Manager</h1>\n                                <div>\n                                    <table id=\"main-table\">\n                                        ".concat(formattedData_1, "\n                                    </table>\n                                </div>\n                            </body>\n                        </html>\n                    "));
                 return [3 /*break*/, 4];
             case 3:
                 if (req.method === "POST") {
@@ -189,6 +188,7 @@ function writeDatabase(newDrive) {
                     return [4 /*yield*/, readDatabase()];
                 case 1:
                     Data = _a.sent();
+                    newDrive.id = Data[Data.length - 1].id + 1;
                     Data.push(newDrive);
                     return [4 /*yield*/, fs_1.promises.writeFile(DATABASE, JSON.stringify(Data, null, '\t'))];
                 case 2:

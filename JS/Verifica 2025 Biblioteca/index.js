@@ -124,7 +124,7 @@ function addListeners(){
 
     NEWBOOK.querySelector("button.btn.btn-success").addEventListener("click", function(){
         const INPUTS = NEWBOOK.querySelectorAll("input[type=text]");
-        biblioteca.push([...INPUTS].map(function(input){
+        biblioteca.push([...INPUTS].map(function (input) {
             return input.value;
         }));    
         loadBooks("All");
